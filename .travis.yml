@@ -3,8 +3,6 @@ sudo: false
 stages:
   - lint
   - test
-  - name: deploy
-    if: branch = master
 
 node_js_defaults: &node_js_defaults
   language: node_js
