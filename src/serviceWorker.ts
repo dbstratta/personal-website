@@ -1,16 +1,23 @@
 /* tslint:disable:no-console */
 
-// In production, we register a service worker to serve assets from local cache.
+/**
+ * In production, we register a service worker to serve assets from local cache.
+ *
+ * This lets the app load faster on subsequent visits in production, and gives
+ * it offline capabilities. However, it also means that developers (and users)
+ * will only see deployed updates on the "N+1" visit to a page, since previously
+ * cached resources are updated in the background.
+ *
+ * To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
+ * This link also includes instructions on opting out of this behavior.
+ */
 
-// This lets the app load faster on subsequent visits in production, and gives
-// it offline capabilities. However, it also means that developers (and users)
-// will only see deployed updates on the "N+1" visit to a page, since previously
-// cached resources are updated in the background.
+import { isProductionEnvironment } from './helpers';
 
-// To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
-// This link also includes instructions on opting out of this behavior.
-
-type Config = any;
+export type Config = {
+  onUpdate?: (registration: ServiceWorkerRegistration) => void;
+  onSuccess?: (registration: ServiceWorkerRegistration) => void;
+};
 
 const isLocalhost = !!(
   window.location.hostname === 'localhost' ||
@@ -23,7 +30,7 @@ const isLocalhost = !!(
 );
 
 export function register(config?: Config): void {
-  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+  if (isProductionEnvironment && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(
       process.env.PUBLIC_URL as string,
@@ -33,7 +40,7 @@ export function register(config?: Config): void {
     if (publicUrl.origin !== window.location.origin) {
       // Our service worker won't work if PUBLIC_URL is on a different origin
       // from what our page is served on. This might happen if a CDN is used to
-      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+      // serve assets; see https://github.com/facebook/create-react-app/issues/2374.
       return;
     }
 
@@ -43,10 +50,12 @@ export function register(config?: Config): void {
         const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
         if (isLocalhost) {
-          // This is running on localhost. Let's check if a service worker still exists or not.
+          // This is running on localhost.
+          // Let's check if a service worker still exists or not.
           checkValidServiceWorker(swUrl, config);
 
-          // Add some additional logging to localhost, pointing developers to the
+          // Add some additional logging to localhost,
+          // pointing developers to the
           // service worker/PWA documentation.
           await navigator.serviceWorker.ready;
           console.log(
@@ -54,7 +63,7 @@ export function register(config?: Config): void {
               'worker. To learn more, visit https://goo.gl/SC7cgQ',
           );
         } else {
-          // Is not local host. Just register service worker
+          // Is not local host. Just register service worker.
           registerValidSW(swUrl, config);
         }
       },
@@ -82,7 +91,7 @@ async function registerValidSW(swUrl: string, config?: Config): Promise<void> {
             console.log('New content is available; please refresh.');
 
             // Execute callback
-            if (config.onUpdate) {
+            if (config && config.onUpdate) {
               config.onUpdate(registration);
             }
           } else {
@@ -92,7 +101,7 @@ async function registerValidSW(swUrl: string, config?: Config): Promise<void> {
             console.log('Content is cached for offline use.');
 
             // Execute callback
-            if (config.onSuccess) {
+            if (config && config.onSuccess) {
               config.onSuccess(registration);
             }
           }
