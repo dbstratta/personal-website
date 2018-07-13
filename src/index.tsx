@@ -3,14 +3,27 @@
  */
 
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate, render } from 'react-dom';
 
 import './globalStyles';
 
 import Root from './components/Root';
 import { register as registerServiceWorker } from './serviceWorker';
 
-const rootElement = document.getElementById('root');
-render(<Root />, rootElement);
+main();
 
-registerServiceWorker();
+function main(): void {
+  const rootElement = document.getElementById('root');
+
+  if (!rootElement) {
+    return;
+  }
+
+  if (rootElement.hasChildNodes()) {
+    hydrate(<Root />, rootElement);
+  } else {
+    render(<Root />, rootElement);
+  }
+
+  registerServiceWorker();
+}

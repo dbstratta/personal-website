@@ -29,6 +29,8 @@
     "format:ci": "prettier --list-different src/**/*.{tsx,ts}",
     "coverage": "codecov",
     "prebuild": "yarn typecheck:ts && yarn clean",
+    "postbuild": "yarn build:prerender",
+    "build:prerender": "react-snap",
     "typecheck:ts": "tsc",
     "clean": "rimraf build",
     "commit": "commit"
@@ -37,6 +39,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-ga": "^2.5.3",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.0-next.3e165448",
     "styled-components": "^3.3.3"
   },
@@ -84,6 +88,7 @@
     "react-app-rewire-typescript-babel-preset": "^2.3.0",
     "react-app-rewired": "^2.0.0",
     "react-hot-loader": "^4.3.3",
+    "react-snap": "^1.15.0",
     "react-test-renderer": "^16.4.1",
     "rimraf": "^2.6.2",
     "tslint": "^5.10.0",

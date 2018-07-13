@@ -3,6 +3,8 @@ sudo: false
 stages:
   - lint
   - test
+  - name: push-docker-image
+    if: branch = master
 
 node_js_defaults: &node_js_defaults
   language: node_js
@@ -11,6 +13,12 @@ node_js_defaults: &node_js_defaults
     yarn: true
     directories:
       - node_modules
+
+docker_defaults: &docker_defaults
+  sudo: required
+  language: generic
+  services:
+    - docker
 
 jobs:
   include:
@@ -21,3 +29,7 @@ jobs:
     - stage: test
       <<: *node_js_defaults
       script: ./scripts/ci/test.sh
+
+    - stage: push-docker-image
+      <<: *docker_defaults
+      script: ./scripts/ci/push_docker_image.sh
