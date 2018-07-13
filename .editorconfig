@@ -22,3 +22,6 @@ indent_size = 2
 
 [nginx.conf]
 indent_size = 2
+
+[*.xml]
+indent_size = 2

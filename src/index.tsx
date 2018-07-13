@@ -1,11 +1,16 @@
+/**
+ * Entry point of the application.
+ */
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 import './globalStyles';
 
 import Root from './components/Root';
-import * as serviceWorker from './serviceWorker';
+import { register as registerServiceWorker } from './serviceWorker';
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+render(<Root />, rootElement);
 
-serviceWorker.register();
+registerServiceWorker();

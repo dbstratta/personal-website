@@ -1,6 +1,9 @@
 {
   "short_name": "Diego Stratta",
-  "name": "Diego Stratta's portfolio",
+  "name": "Diego Stratta",
+  "description": "Diego Stratta's portfolio",
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
       "src": "favicon.ico",
