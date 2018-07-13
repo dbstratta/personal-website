@@ -5,6 +5,8 @@ const {
 const rewireStyledComponents = require('react-app-rewire-styled-components');
 const rewireReactHotLoader = require('react-app-rewire-hot-loader');
 
+/* eslint-disable no-param-reassign */
+
 module.exports = {
   webpack(config, env) {
     config = rewireTypescript(config);
