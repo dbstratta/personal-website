@@ -1,26 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+import LeftPane from './LeftPane';
+import RightPane from './RightPane';
+
+const Grid = styled.section`
   display: grid;
-  justify-items: center;
+  justify-content: center;
+
+  justify-items: stretch;
   align-items: center;
 
-  height: 100vh;
+  grid-template-columns: [grid-left] 1fr [grid-right];
+  grid-template-rows: [grid-top] repeat(2, auto) [grid-bottom];
 
-  --primary-background-color: hsla(360, 72%, 65%, 1);
-  --secondary-background-color: hsla(235, 62%, 65%, 1);
+  column-gap: var(--xl-space);
+  row-gap: var(--sm-space);
 
-  --background: linear-gradient(
-    135deg,
-    var(--primary-background-color),
-    var(--secondary-background-color)
-  );
+  width: 80%;
+  min-height: 80vh;
 
-  background-image: var(--background);
-  background-repeat: no-repeat;
+  margin: auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    grid-template-columns: [grid-left] 6fr 7fr [grid-right];
+    grid-template-rows: [grid-top] 1fr [grid-bottom];
+
+    width: 95%;
+  }
 `;
 
-const Splash = () => <Wrapper>hola</Wrapper>;
+export const Splash = () => (
+  <Grid>
+    <LeftPane />
+    <RightPane />
+  </Grid>
+);
 
 export default Splash;

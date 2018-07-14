@@ -9,6 +9,7 @@ import './globalStyles';
 
 import Root from './components/Root';
 import { register as registerServiceWorker } from './serviceWorker';
+import theme from './theme';
 
 main();
 
@@ -19,10 +20,12 @@ function main(): void {
     return;
   }
 
+  const rootReactElement = <Root theme={theme} />;
+
   if (rootElement.hasChildNodes()) {
-    hydrate(<Root />, rootElement);
+    hydrate(rootReactElement, rootElement);
   } else {
-    render(<Root />, rootElement);
+    render(rootReactElement, rootElement);
   }
 
   registerServiceWorker();
