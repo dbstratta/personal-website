@@ -18,7 +18,7 @@ const Grid = styled.section`
   row-gap: var(--sm-space);
 
   width: 80%;
-  min-height: 80vh;
+  min-height: 70vh;
 
   margin: auto;
 

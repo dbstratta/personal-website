@@ -23,7 +23,7 @@ const About = styled.div`
   color: var(--secondary-font-color);
   font-size: var(--lg-font-size);
 
-  margin-bottom: 2rem;
+  margin-bottom: var(--lg-space);
 `;
 
 export const RightPane = () => (
