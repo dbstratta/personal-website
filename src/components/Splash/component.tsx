@@ -10,6 +10,7 @@ const Grid = styled.section`
 
   justify-items: stretch;
   align-items: center;
+  align-content: center;
 
   grid-template-columns: [grid-left] 1fr [grid-right];
   grid-template-rows: [grid-top] repeat(2, auto) [grid-bottom];
@@ -17,10 +18,10 @@ const Grid = styled.section`
   column-gap: var(--xl-space);
   row-gap: var(--sm-space);
 
-  width: 80%;
+  width: var(--main-content-width);
   min-height: 70vh;
 
-  margin: auto;
+  margin: 0 auto var(--xl-space);
 
   flex: 1 0 auto;
   align-self: flex-start;
@@ -28,8 +29,6 @@ const Grid = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-columns: [grid-left] 6fr 7fr [grid-right];
     grid-template-rows: [grid-top] 1fr [grid-bottom];
-
-    width: 95%;
   }
 `;
 

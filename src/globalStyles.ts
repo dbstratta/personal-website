@@ -1,9 +1,11 @@
 import { injectGlobal } from 'styled-components';
 
+import theme from './theme';
+
 /* tslint:disable-next-line:no-unused-expression */
 injectGlobal`
   :root {
-    --sans-serif-font-family: 'Open Sansa', sans-serif;
+    --sans-serif-font-family: sans-serif;
     --serif-font-family: 'EB Garamanond', serif;
     --display-font-family: var(--serif-font-family);
     --handwriting-font-family: 'La Belle Aurore', sans-serif;
@@ -14,6 +16,8 @@ injectGlobal`
     --primary-font-color: hsla(0, 0%, 10%, 1);
     --secondary-font-color: hsla(0, 0%, 30%, 1);
     --tertiary-font-color: hsla(0, 0%, 40%, 1);
+
+    --separator-color: hsla(0, 0%, 70%, 1);
 
     --background-color: hsla(43, 100%, 99%, 1);
 
@@ -30,7 +34,17 @@ injectGlobal`
     --md-space: calc(var(--base-space) * 8);
     --lg-space: calc(var(--base-space) * 13);
     --xl-space: calc(var(--base-space) * 21);
+
+    --sm-transition: 0.1s;
+    --md-transition: 0.2s;
+    --lg-transition: 0.3s;
+
+    --main-content-width: 80%;
+
+  @media (min-width: ${theme.breakpoints.lg}) {
+    --main-content-width: 95%;
   }
+ }
 
   * {
     box-sizing: border-box;
@@ -49,9 +63,11 @@ injectGlobal`
   body {
     margin: 0;
 
-    font-family: var(--sans-serif-font-family);
+    font-family: var(--serif-font-family);
     font-size: var(--md-font-size);
     color: var(--primary-font-color);
+
+    scroll-behavior: smooth;
   }
 
   #root {

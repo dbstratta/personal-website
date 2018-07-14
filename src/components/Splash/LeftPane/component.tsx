@@ -20,7 +20,7 @@ const JobTitle = styled.div`
   color: var(--secondary-font-color);
   text-transform: lowercase;
 
-  transition: 0.3s;
+  transition: var(--lg-transition);
 
   :hover {
     color: var(--primary-font-color);
