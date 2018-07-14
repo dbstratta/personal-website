@@ -4,7 +4,7 @@
   "tslint.jsEnable": false,
   "tslint.packageManager": "yarn",
   "javascript.suggestionActions.enabled": false,
-  "jest.autoEnable": true,
+  "jest.autoEnable": false,
   "jest.enableCodeLens": false,
   "eslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",

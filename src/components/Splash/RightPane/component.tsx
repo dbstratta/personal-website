@@ -35,6 +35,7 @@ const About = styled.div`
 
 const StyledSocial = styled(Social)`
   margin-top: var(--md-space);
+  text-align: center;
 `;
 
 export const RightPane = () => (
