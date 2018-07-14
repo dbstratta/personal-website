@@ -8,12 +8,14 @@ const Wrapper = styled.div`
   align-self: start;
 
   width: 100%;
+  margin-top: var(--lg-space);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     justify-self: start;
     align-self: center;
 
     width: 60%;
+    margin-top: 0;
   }
 `;
 

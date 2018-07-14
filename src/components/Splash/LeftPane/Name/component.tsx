@@ -39,14 +39,10 @@ const getPrimaryColorHue = (): number => {
 };
 
 export class Name extends PureComponent<NameProps, NameState> {
-  public static defaultProps: Partial<NameProps> = {
-    initialColorHue: getPrimaryColorHue(),
-  };
-
   public intervalId: number | null = null;
 
   public readonly state: NameState = {
-    colorHue: 1,
+    colorHue: this.props.initialColorHue || getPrimaryColorHue(),
     changeColorHueInterval: 2000,
   };
 

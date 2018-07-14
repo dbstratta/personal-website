@@ -6,6 +6,10 @@ const StyledFooter = styled.footer`
   color: var(--tertiary-font-color);
 
   font-family: var(--serif-font-family);
+
+  flex: 0 0 auto;
+
+  margin: var(--lg-space) auto var(--sm-space);
 `;
 
 const currentYear = new Date().getFullYear();

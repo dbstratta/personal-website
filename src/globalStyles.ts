@@ -7,7 +7,7 @@ injectGlobal`
     --serif-font-family: 'EB Garamanond', serif;
     --display-font-family: var(--serif-font-family);
 
-    --primary-color-hue: 100;
+    --primary-color-hue: 200;
     --primary-color: hsla(var(--primary-color-hue), 100%, 50%, 1);
 
     --primary-font-color: hsla(0, 0%, 10%, 1);
@@ -36,7 +36,8 @@ injectGlobal`
   }
 
   html,
-  body {
+  body,
+  #root {
     height: 100%;
   }
 
@@ -50,5 +51,10 @@ injectGlobal`
     font-family: var(--sans-serif-font-family);
     font-size: var(--md-font-size);
     color: var(--primary-font-color);
+  }
+
+  #root {
+    display: flex;
+    flex-flow: column nowrap;
   }
 `;

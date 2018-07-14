@@ -22,6 +22,9 @@ const Grid = styled.section`
 
   margin: auto;
 
+  flex: 1 0 auto;
+  align-self: flex-start;
+
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-columns: [grid-left] 6fr 7fr [grid-right];
     grid-template-rows: [grid-top] 1fr [grid-bottom];
