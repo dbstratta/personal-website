@@ -6,9 +6,9 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icon.png",
+      "sizes": "192x192 168x168 144x144 96x96 72x72 64x64 32x32 24x24 16x16",
+      "type": "image/png"
     }
   ],
   "start_url": ".",

@@ -14,10 +14,17 @@ const Wrapper = styled.div`
 const JobTitle = styled.div`
   text-align: center;
 
-  font-size: calc(var(--lg-font-size) * 1.2);
+  font-family: var(--handwriting-font-family);
+  font-size: calc(var(--xl-font-size));
 
   color: var(--secondary-font-color);
   text-transform: lowercase;
+
+  transition: 0.3s;
+
+  :hover {
+    color: var(--primary-font-color);
+  }
 `;
 
 export const LeftPane = () => (

@@ -14,11 +14,11 @@ export type SocialLinkProps = {
 };
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: var(--primary-font-color);
+  color: var(--secondary-font-color);
   transition: 0.3s;
 
   :hover {
-    color: var(--secondary-font-color);
+    color: var(--primary-font-color);
   }
 `;
 

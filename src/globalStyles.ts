@@ -6,6 +6,7 @@ injectGlobal`
     --sans-serif-font-family: 'Open Sansa', sans-serif;
     --serif-font-family: 'EB Garamanond', serif;
     --display-font-family: var(--serif-font-family);
+    --handwriting-font-family: 'La Belle Aurore', sans-serif;
 
     --primary-color-hue: 200;
     --primary-color: hsla(var(--primary-color-hue), 100%, 50%, 1);
@@ -56,5 +57,9 @@ injectGlobal`
   #root {
     display: flex;
     flex-flow: column nowrap;
+  }
+
+  ::selection {
+    background-color: hsla(var(--primary-color-hue), 100%, 80%, 1);
   }
 `;
