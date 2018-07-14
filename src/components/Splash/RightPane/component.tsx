@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from '../../Link';
 
+import Separator from '../../Separator';
 import Social from './Social';
 
 const Wrapper = styled.div`
@@ -21,15 +23,28 @@ const Wrapper = styled.div`
 
 const About = styled.div`
   color: var(--secondary-font-color);
-  font-size: var(--lg-font-size);
+  font-size: calc(var(--lg-font-size) * 1.2);
+  font-family: var(--serif-font-family);
 
-  margin-bottom: var(--lg-space);
+  margin-bottom: var(--md-space);
+
+  &::first-letter {
+    font-size: 1.3em;
+  }
+`;
+
+const StyledSocial = styled(Social)`
+  margin-top: var(--md-space);
 `;
 
 export const RightPane = () => (
   <Wrapper>
-    <About>Hi! I'm a web developer from Montevideo, Uruguay.</About>
-    <Social />
+    <About>
+      Hi! I'm a full stack web developer from Montevideo, Uruguay.{' '}
+      <Link to={{ hash: '#about' }}>Read more</Link>.
+    </About>
+    <Separator />
+    <StyledSocial />
   </Wrapper>
 );
 

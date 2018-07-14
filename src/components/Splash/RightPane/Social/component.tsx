@@ -1,10 +1,15 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
 
 const Wrapper = styled.div``;
+
+export type SocialProps = {
+  className?: string;
+};
 
 export type SocialLinkProps = {
   icon: any;
@@ -15,7 +20,7 @@ export type SocialLinkProps = {
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--secondary-font-color);
-  transition: 0.3s;
+  transition: var(--lg-transition);
 
   :hover {
     color: var(--primary-font-color);
@@ -24,6 +29,7 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 
 const SocialLink = (props: SocialLinkProps) => (
   <OutboundLink
+    target="_blank"
     eventLabel=""
     to={props.to}
     className={props.className}
@@ -35,7 +41,7 @@ const SocialLink = (props: SocialLinkProps) => (
 
 const StyledSocialLink = styled(SocialLink)`
   &:not(:first-child) {
-    margin-left: var(--lg-space);
+    margin-left: calc(var(--lg-space) * 1.3);
   }
 `;
 
@@ -55,10 +61,19 @@ const LinkedInLink = () => (
   />
 );
 
-export const Social = () => (
-  <Wrapper>
+const EmailLink = () => (
+  <StyledSocialLink
+    icon={faEnvelope}
+    to="mailto:strattadb@gmail.com"
+    title="Email"
+  />
+);
+
+export const Social = ({ className }: SocialProps) => (
+  <Wrapper className={className}>
     <GitHubLink />
     <LinkedInLink />
+    <EmailLink />
   </Wrapper>
 );
 
