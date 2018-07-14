@@ -6,7 +6,7 @@ import theme from './theme';
 injectGlobal`
   :root {
     --sans-serif-font-family: sans-serif;
-    --serif-font-family: 'EB Garamanond', serif;
+    --serif-font-family: 'EB Garamond', serif;
     --display-font-family: var(--serif-font-family);
     --handwriting-font-family: 'La Belle Aurore', sans-serif;
 

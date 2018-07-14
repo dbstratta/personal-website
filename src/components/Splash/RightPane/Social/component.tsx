@@ -35,7 +35,7 @@ const SocialLink = (props: SocialLinkProps) => (
     className={props.className}
     title={props.title}
   >
-    <StyledFontAwesomeIcon icon={props.icon} size="3x" />
+    <StyledFontAwesomeIcon icon={props.icon} size="2x" />
   </OutboundLink>
 );
 
