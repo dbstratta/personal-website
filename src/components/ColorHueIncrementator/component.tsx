@@ -4,13 +4,13 @@ import { getPrimaryColorHue } from '../../helpers';
 import Interval from '../Interval';
 
 export type ColorHueIncrementatorProps = {
-  delay?: number;
-  initialColorHue?: number;
-  render: (state: ColorHueIncrementatorState) => React.ReactNode;
+  readonly delay?: number;
+  readonly initialColorHue?: number;
+  readonly render: (state: ColorHueIncrementatorState) => React.ReactNode;
 };
 
 export type ColorHueIncrementatorState = {
-  colorHue: number;
+  readonly colorHue: number;
 };
 
 export class ColorHueIncrementator extends PureComponent<

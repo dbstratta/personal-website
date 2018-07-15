@@ -1,24 +1,12 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import Name from './Name';
-
-const fadeUpIn = keyframes`
-  from {
-    opacity: 0.1;
-    transform: translateY(calc(var(--xs-space) * 0.5));
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 const Wrapper = styled.div`
   justify-self: center;
 
-  animation: ${fadeUpIn} 1s;
+  animation: var(--fade-up-in-keyframe) 1s;
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     justify-self: end;
@@ -27,6 +15,7 @@ const Wrapper = styled.div`
 
 const JobTitle = styled.div`
   text-align: center;
+  line-height: 3rem;
 
   font-family: var(--handwriting-font-family);
   font-size: calc(var(--xl-font-size));

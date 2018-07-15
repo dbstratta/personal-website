@@ -10,12 +10,14 @@ const Wrapper = styled.div.attrs({
 })`
   font-family: var(--display-font-family);
   font-size: var(--xxl-font-size);
+  text-align: center;
 
   margin-bottom: var(--xs-space);
 
   transition: var(--md-transition);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    text-align: left;
     font-size: calc(var(--xxl-font-size) * 1.4);
   }
 ` as any;

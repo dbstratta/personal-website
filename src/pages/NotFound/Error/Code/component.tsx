@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 export type CodeProps = {
-  code: number;
-  colorHue: number;
+  readonly code: number;
+  readonly colorHue: number;
 };
 
 const Wrapper = styled.div.attrs({

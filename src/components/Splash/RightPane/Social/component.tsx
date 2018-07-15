@@ -8,14 +8,14 @@ import styled from 'styled-components';
 const Wrapper = styled.div``;
 
 export type SocialProps = {
-  className?: string;
+  readonly className?: string;
 };
 
 export type SocialLinkProps = {
-  icon: any;
-  to: string;
-  className?: string;
-  title?: string;
+  readonly icon: any;
+  readonly to: string;
+  readonly className?: string;
+  readonly title?: string;
 };
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`

@@ -1,6 +1,18 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal, keyframes } from 'styled-components';
 
 import theme from './theme';
+
+const fadeUpInKeyframe = keyframes`
+  from {
+    opacity: 0.1;
+    transform: translateY(calc(var(--xs-space) * 0.5));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 /* tslint:disable-next-line:no-unused-expression */
 injectGlobal`
@@ -40,6 +52,8 @@ injectGlobal`
     --lg-transition: 0.3s;
 
     --main-content-width: 80%;
+
+    --fade-up-in-keyframe: ${fadeUpInKeyframe};
 
   @media (min-width: ${theme.breakpoints.lg}) {
     --main-content-width: 95%;

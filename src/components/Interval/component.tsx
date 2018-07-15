@@ -3,13 +3,13 @@ import { Component } from 'react';
 type IntervalHandler = () => void;
 
 export type IntervalProps = {
-  delay: number;
-  handleInterval: IntervalHandler;
+  readonly delay: number;
+  readonly handleInterval: IntervalHandler;
 };
 
 export class Interval extends Component<IntervalProps> {
   private intervalId: number | null = null;
-  private handleInterval: IntervalHandler = this.props.handleInterval;
+  private readonly handleInterval: IntervalHandler = this.props.handleInterval;
 
   public componentDidMount() {
     this.setInterval();

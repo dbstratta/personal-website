@@ -1,12 +1,12 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import ColorHueIncrementator from '../../../components/ColorHueIncrementator';
 import Code from './Code';
 
 export type ErrorProps = {
-  code: number;
-  message: string;
+  readonly code: number;
+  readonly message: string;
 };
 
 const Grid = styled.div`
@@ -35,21 +35,9 @@ const Message = styled.div`
   color: var(--secondary-font-color);
 `;
 
-const fadeUpIn = keyframes`
-  from {
-    opacity: 0.1;
-    transform: translateY(calc(var(--xs-space) * 0.5));
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 const Wrapper = styled.div`
   margin-bottom: calc(var(--xl-space) * 1.5);
-  animation: ${fadeUpIn} 1s;
+  animation: var(--fade-up-in-keyframe) 1s;
 `;
 
 export const Error = ({ code, message }: ErrorProps) => (

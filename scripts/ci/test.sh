@@ -11,9 +11,8 @@ readonly __file="${__dir}/$(basename "${__script_path}")"
 readonly __base="$(basename "${__file}")"
 readonly __root="$(cd "$(dirname "$(dirname "${__dir}")")" && pwd)"
 
-
 main() {
-    yarn test --coverage
+    yarn test:ci:unit
     yarn coverage
 }
 

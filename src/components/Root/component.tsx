@@ -10,7 +10,7 @@ import App from '../App';
 analytics.initializeGoogleAnalytics();
 
 export type RootProps = {
-  theme: Theme;
+  readonly theme: Theme;
 };
 
 export const Root = ({ theme }: RootProps) => (
