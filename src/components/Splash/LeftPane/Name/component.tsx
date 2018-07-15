@@ -13,7 +13,7 @@ const Wrapper = styled.div.attrs({
 
   margin-bottom: var(--xs-space);
 
-  transition: var(--sm-transition);
+  transition: var(--md-transition);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     font-size: calc(var(--xxl-font-size) * 1.4);

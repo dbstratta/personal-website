@@ -9,7 +9,7 @@ export const NotFound = () => (
     <Helmet>
       <title>Diego Stratta | Page Not Found</title>
     </Helmet>
-    <Error code={404} message="Page not found" />
+    <Error code={404} message="Page not found." />
     <Footer />
   </>
 );
