@@ -5,3 +5,8 @@ base = ""
 publish = "build"
 # Command to build the files.
 command = "yarn build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

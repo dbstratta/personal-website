@@ -13,7 +13,6 @@ scripts
 .editorconfig
 appveyor.yml
 netflify.toml
-nginx.conf
 dangerfile.ts
 prettier.config.js
 husky.config.js

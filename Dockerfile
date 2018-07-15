@@ -19,4 +19,4 @@ FROM nginx:1.15.1-alpine
 
 COPY --from=builder /usr/src/app/build/ /usr/share/nginx/html/
 
-COPY nginx.conf /etc/nginx/sites-available/portfolio.conf
+COPY nginx/nginx.conf /etc/nginx/sites-available/portfolio.conf
