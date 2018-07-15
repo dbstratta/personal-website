@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 
   flex: 0 0 auto;
 
-  margin: var(--lg-space) auto var(--sm-space);
+  margin: var(--xl-space) auto var(--sm-space);
 `;
 
 const currentYear = new Date().getFullYear();

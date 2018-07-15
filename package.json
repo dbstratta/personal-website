@@ -9,6 +9,7 @@
     "email": "strattadb@gmail.com",
     "url": "https://diegostratta.com"
   },
+  "homepage": "https://diegostratta.com",
   "private": true,
   "scripts": {
     "start": "react-app-rewired start",
@@ -29,8 +30,6 @@
     "format:ci": "prettier --list-different src/**/*.{tsx,ts}",
     "coverage": "codecov",
     "prebuild": "yarn typecheck:ts && yarn clean",
-    "postbuild": "yarn build:prerender",
-    "build:prerender": "react-snap",
     "typecheck:ts": "tsc",
     "clean": "rimraf build",
     "commit": "commit"
@@ -94,7 +93,6 @@
     "react-app-rewire-typescript-babel-preset": "2.3.0",
     "react-app-rewired": "2.0.0",
     "react-hot-loader": "4.3.3",
-    "react-snap": "1.15.0",
     "react-test-renderer": "16.4.1",
     "rimraf": "2.6.2",
     "tslint": "5.10.0",
