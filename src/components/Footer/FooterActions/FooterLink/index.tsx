@@ -1,0 +1,1 @@
+export { footerLinkStyle } from './styles';

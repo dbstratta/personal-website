@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import { isProductionEnvironment } from '../helpers/environments';
 import { Event } from './events';
 
-export const initializeGoogleAnalytics = (): void => {
+export const initializeAnalytics = (): void => {
   const googleAnalyticsTrackingCode = 'UA-85159007-1';
   const reactGAInitializeOptions: ReactGA.InitializeOptions = {
     debug: !isProductionEnvironment,

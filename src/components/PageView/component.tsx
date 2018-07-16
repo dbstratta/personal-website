@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom';
 
 import { sendPageView } from '../../analytics';
 
-export type PageViewProps = {
-  readonly pathname: string;
-};
+export type PageViewProps = Readonly<{
+  pathname: string;
+}>;
 
 export class PageViewBase extends PureComponent<PageViewProps> {
   public componentDidMount() {

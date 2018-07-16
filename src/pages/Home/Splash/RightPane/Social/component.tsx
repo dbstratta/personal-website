@@ -5,18 +5,19 @@ import React from 'react';
 import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
 
-const Wrapper = styled.div``;
+const Wrapper = 'div';
 
-export type SocialProps = {
-  readonly className?: string;
-};
+export type SocialProps = Readonly<{
+  className?: string;
+}>;
 
-export type SocialLinkProps = {
-  readonly icon: any;
-  readonly to: string;
-  readonly className?: string;
-  readonly title?: string;
-};
+export type SocialLinkProps = Readonly<{
+  icon: any;
+  to: string;
+  className?: string;
+  title?: string;
+  eventLabel: string;
+}>;
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--secondary-font-color);
@@ -27,15 +28,22 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const SocialLink = (props: SocialLinkProps) => (
+const SocialLink: React.SFC<SocialLinkProps> = ({
+  to,
+  title,
+  className,
+  eventLabel,
+  icon,
+}) => (
   <OutboundLink
+    to={to}
+    eventLabel={eventLabel}
     target="_blank"
-    eventLabel=""
-    to={props.to}
-    className={props.className}
-    title={props.title}
+    rel="noopener noreferrer"
+    title={title}
+    className={className}
   >
-    <StyledFontAwesomeIcon icon={props.icon} size="2x" />
+    <StyledFontAwesomeIcon icon={icon} size="2x" />
   </OutboundLink>
 );
 
@@ -45,31 +53,34 @@ const StyledSocialLink = styled(SocialLink)`
   }
 `;
 
-const GitHubLink = () => (
+const GitHubLink: React.SFC = () => (
   <StyledSocialLink
     icon={faGithub}
     to="https://github.com/strattadb"
+    eventLabel="GitHub profile"
     title="GitHub"
   />
 );
 
-const LinkedInLink = () => (
+const LinkedInLink: React.SFC = () => (
   <StyledSocialLink
     icon={faLinkedin}
     to="https://www.linkedin.com/in/diegostratta/"
+    eventLabel="LinkedIn profile"
     title="LinkedIn"
   />
 );
 
-const EmailLink = () => (
+const EmailLink: React.SFC = () => (
   <StyledSocialLink
     icon={faEnvelope}
     to="mailto:strattadb@gmail.com"
+    eventLabel="Mailto"
     title="Email"
   />
 );
 
-export const Social = ({ className }: SocialProps) => (
+export const Social: React.SFC<SocialProps> = ({ className }) => (
   <Wrapper className={className}>
     <GitHubLink />
     <LinkedInLink />

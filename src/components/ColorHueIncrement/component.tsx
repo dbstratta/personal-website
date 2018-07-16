@@ -3,21 +3,21 @@ import React, { PureComponent } from 'react';
 import theme from '../../theme';
 import Interval from '../Interval';
 
-export type ColorHueIncrementProps = {
-  readonly delay?: number;
-  readonly initialColorHue?: number;
-  readonly render: (state: ColorHueIncrementState) => React.ReactNode;
-};
+export type ColorHueIncrementProps = Readonly<{
+  delay?: number;
+  initialColorHue?: number;
+  render: (state: ColorHueIncrementState) => React.ReactNode;
+}>;
 
-export type ColorHueIncrementState = {
-  readonly colorHue: number;
-};
+export type ColorHueIncrementState = Readonly<{
+  colorHue: number;
+}>;
 
 export class ColorHueIncrement extends PureComponent<
   ColorHueIncrementProps,
   ColorHueIncrementState
 > {
-  public static defaultProps: Partial<ColorHueIncrementProps> = {
+  public static defaultProps = {
     delay: 2000,
     initialColorHue: theme.colors.primaryColorHue,
   };

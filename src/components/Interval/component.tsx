@@ -2,10 +2,10 @@ import { PureComponent } from 'react';
 
 type IntervalHandler = () => void;
 
-export type IntervalProps = {
-  readonly delay: number;
-  readonly handleInterval: IntervalHandler;
-};
+export type IntervalProps = Readonly<{
+  delay: number;
+  handleInterval: IntervalHandler;
+}>;
 
 export class Interval extends PureComponent<IntervalProps> {
   private intervalId: number | null = null;
@@ -21,7 +21,7 @@ export class Interval extends PureComponent<IntervalProps> {
     );
   }
 
-  public componentDidUpdate(prevProps: IntervalProps) {
+  public componentDidUpdate() {
     this.resetInterval();
   }
 

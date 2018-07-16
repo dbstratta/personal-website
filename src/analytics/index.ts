@@ -1,6 +1,6 @@
 export {
   sendAnalyticsEvent,
-  initializeGoogleAnalytics,
+  initializeAnalytics,
   sendPageView,
 } from './analytics';
 export { Event, EventCategory } from './events';

@@ -1,17 +1,17 @@
 import React from 'react';
+import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
 
-const StyledLink = styled.a`
-  text-decoration: underline;
-  cursor: pointer;
-  color: inherit;
-  background-color: inherit;
-  border: none;
+import { footerLinkStyle } from '../FooterLink';
+
+const StyledLink = styled(OutboundLink)`
+  ${footerLinkStyle};
 `;
 
 export const SourceCodeLink: React.SFC = () => (
   <StyledLink
-    href="https://github.com/strattadb/portfolio"
+    to="https://github.com/strattadb/portfolio"
+    eventLabel="Website Source Code (GitHub)"
     rel="noopener noreferrer"
     target="_blank"
   >
