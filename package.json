@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -64,7 +64,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-typescript": "7.0.0-beta.53",
+    "@babel/preset-typescript": "7.0.0-beta.54",
     "@commitlint/cli": "7.0.0",
     "@commitlint/config-conventional": "7.0.1",
     "@commitlint/prompt-cli": "7.0.0",
