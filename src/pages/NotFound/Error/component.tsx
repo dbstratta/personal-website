@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ColorHueIncrementator from '../../../components/ColorHueIncrementator';
 import Code from './Code';
+import LinkToHomepage from './LinkToHomepage';
 
 export type ErrorProps = {
   readonly code: number;
@@ -33,6 +33,8 @@ const Grid = styled.div`
 const Message = styled.div`
   font-size: var(--xl-font-size);
   color: var(--secondary-font-color);
+
+  margin-bottom: var(--xl-space);
 `;
 
 const Wrapper = styled.div`
@@ -40,13 +42,12 @@ const Wrapper = styled.div`
   animation: var(--fade-up-in-keyframe) 1s;
 `;
 
-export const Error = ({ code, message }: ErrorProps) => (
+export const Error: React.SFC<ErrorProps> = ({ code, message }) => (
   <Grid>
     <Wrapper>
-      <ColorHueIncrementator
-        render={({ colorHue }) => <Code code={code} colorHue={colorHue} />}
-      />
+      <Code code={code} />
       <Message>{message}</Message>
+      <LinkToHomepage />
     </Wrapper>
   </Grid>
 );

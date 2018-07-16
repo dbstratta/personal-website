@@ -7,6 +7,7 @@ const server = {
 
 module.exports = {
   launch: {
+    ignoreHTTPSErrors: true,
     headless: process.env.PUPPETEER_HEADLESS,
     args,
   },

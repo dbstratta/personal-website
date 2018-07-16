@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import { isProductionEnvironment } from '../helpers/environments';
 import { Event } from './events';
 
-export const initializeGoogleAnalytics = () => {
+export const initializeGoogleAnalytics = (): void => {
   const googleAnalyticsTrackingCode = 'UA-85159007-1';
   const reactGAInitializeOptions: ReactGA.InitializeOptions = {
     debug: !isProductionEnvironment,
@@ -16,10 +16,10 @@ export const initializeGoogleAnalytics = () => {
 export const sendAnalyticsEvent = (event: Event): void =>
   ReactGA.event({ ...event, transport: 'beacon' });
 
-export type SendPageVisitArgs = {
+export type SendPageViewArgs = {
   path: string;
   title?: string;
 };
 
-export const sendPageVisit = (data: SendPageVisitArgs): void =>
+export const sendPageView = (data: SendPageViewArgs): void =>
   ReactGA.pageview(data.path, undefined, data.title);

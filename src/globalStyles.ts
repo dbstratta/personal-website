@@ -14,6 +14,20 @@ const fadeUpInKeyframe = keyframes`
   }
 `;
 
+const waitAndFadeInKeyframe = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
 /* tslint:disable-next-line:no-unused-expression */
 injectGlobal`
   :root {
@@ -54,6 +68,7 @@ injectGlobal`
     --main-content-width: 80%;
 
     --fade-up-in-keyframe: ${fadeUpInKeyframe};
+    --wait-and-fade-in-keyframe: ${waitAndFadeInKeyframe};
 
   @media (min-width: ${theme.breakpoints.lg}) {
     --main-content-width: 80%;

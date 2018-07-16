@@ -9,7 +9,6 @@ import './globalStyles';
 
 import Root from './components/Root';
 import { register as registerServiceWorker } from './serviceWorker';
-import theme from './theme';
 
 main();
 
@@ -20,7 +19,7 @@ function main(): void {
     throw new Error('root element not found');
   }
 
-  const rootReactElement = <Root theme={theme} />;
+  const rootReactElement = <Root />;
 
   render(rootReactElement, rootElement);
 

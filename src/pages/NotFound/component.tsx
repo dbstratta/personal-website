@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../../components/Footer';
 import Error from './Error';
 
-export const NotFound = () => (
+export const NotFound: React.SFC = () => (
   <>
     <Helmet>
       <title>Diego Stratta | Page Not Found</title>

@@ -1,7 +1,7 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-import Link from '../../../Link';
+import Link from '../../../../../components/Link';
 
 const Wrapper = styled.div`
   color: var(--secondary-font-color);
@@ -17,22 +17,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const fadeInKeyframe = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
-
 const ReadMoreWrapper = styled.span`
-  animation: ${fadeInKeyframe} 3s;
+  animation: var(--wait-and-fade-in-keyframe) 3s;
 `;
 
 export const ShortAbout = () => (

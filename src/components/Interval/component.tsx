@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 
 type IntervalHandler = () => void;
 
@@ -7,22 +7,22 @@ export type IntervalProps = {
   readonly handleInterval: IntervalHandler;
 };
 
-export class Interval extends Component<IntervalProps> {
+export class Interval extends PureComponent<IntervalProps> {
   private intervalId: number | null = null;
-  private readonly handleInterval: IntervalHandler = this.props.handleInterval;
 
   public componentDidMount() {
     this.setInterval();
   }
 
   private setInterval() {
-    this.intervalId = window.setInterval(this.handleInterval, this.props.delay);
+    this.intervalId = window.setInterval(
+      this.props.handleInterval,
+      this.props.delay,
+    );
   }
 
   public componentDidUpdate(prevProps: IntervalProps) {
-    if (this.props.delay !== prevProps.delay) {
-      this.resetInterval();
-    }
+    this.resetInterval();
   }
 
   private resetInterval() {
@@ -44,7 +44,7 @@ export class Interval extends Component<IntervalProps> {
   }
 
   public render() {
-    return this.props.children || null;
+    return null;
   }
 }
 

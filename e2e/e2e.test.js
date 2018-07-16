@@ -1,6 +1,6 @@
 describe('index page', () => {
   beforeAll(async () => {
-    await page.goto('http://localhost:3000');
+    await page.goto('https://localhost:3000');
   });
 
   test('contains my name', async () => {

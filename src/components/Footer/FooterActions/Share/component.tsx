@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import { Event, sendAnalyticsEvent } from '../../../analytics';
+import { Event, sendAnalyticsEvent } from '../../../../analytics';
 
 type NavigatorShareFnArgs = {
   url: USVString;
@@ -22,9 +22,9 @@ const StyledButton = styled.button`
 `;
 
 export class Share extends PureComponent {
-  private handleClick = (): Promise<void> => this.shareWebsite();
+  private readonly handleClick = (): Promise<void> => this.shareWebsite();
 
-  private shareWebsite = async (): Promise<void> => {
+  private readonly shareWebsite = async (): Promise<void> => {
     try {
       await (navigator as NavigatorShare).share({
         url: window.location.href,
@@ -32,12 +32,20 @@ export class Share extends PureComponent {
         title: document.title,
       });
 
-      const event: Event = { category: 'Share', action: 'share' };
-      sendAnalyticsEvent(event);
+      this.sendShareSuccessAnalyticsEvent();
     } catch (e) {
-      const event: Event = { category: 'Share', action: 'cancel' };
-      sendAnalyticsEvent(event);
+      this.sendShareFailureAnalyticsEvent();
     }
+  };
+
+  private readonly sendShareSuccessAnalyticsEvent = (): void => {
+    const event: Event = { category: 'Share', action: 'share' };
+    sendAnalyticsEvent(event);
+  };
+
+  private readonly sendShareFailureAnalyticsEvent = (): void => {
+    const event: Event = { category: 'Share', action: 'cancel' };
+    sendAnalyticsEvent(event);
   };
 
   public render() {

@@ -1,17 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ColorHueIncrementator from '../../../ColorHueIncrementator';
+import ColorIncrement from '../../../../../components/ColorIncrement';
 
-export type NameProps = {
-  colorHue: number;
-};
-
-const Wrapper = styled.div.attrs({
-  style: (props: any) => ({
-    color: `hsla(${props.colorHue}, 100%, 50%, 1)`,
-  }),
-})`
+const StyledColorIncrement = styled(ColorIncrement)`
   font-family: var(--display-font-family);
   font-size: var(--xxl-font-size);
 
@@ -22,7 +14,7 @@ const Wrapper = styled.div.attrs({
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     font-size: calc(var(--xxl-font-size) * 1.4);
   }
-` as any;
+`;
 
 const FirstName = () => <div>Diego</div>;
 const LastName = () => <div>Stratta</div>;
@@ -34,16 +26,10 @@ const FullName = () => (
   </>
 );
 
-export const Name = ({ colorHue }: NameProps) => (
-  <Wrapper colorHue={colorHue}>
+export const Name: React.SFC = () => (
+  <StyledColorIncrement>
     <FullName />
-  </Wrapper>
+  </StyledColorIncrement>
 );
 
-const NameWithProps = () => (
-  <ColorHueIncrementator
-    render={({ colorHue }) => <Name colorHue={colorHue} />}
-  />
-);
-
-export default NameWithProps;
+export default Name;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Separator from '../../Separator';
+import Separator from '../../../../components/Separator';
 import ShortAbout from './ShortAbout';
 import Social from './Social';
 

@@ -1,19 +1,27 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import Home from '../../pages/Home';
-import NotFound from '../../pages/NotFound';
-import PageVisit from '../PageVisit';
+import { Theme } from '../../theme';
+import PageView from '../PageView';
+import Routes from './Routes';
 
-export const App = () => (
-  <>
-    <PageVisit />
+import ScrollToHash from './ScrollToHash';
 
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route component={NotFound} />
-    </Switch>
-  </>
+export type AppProps = {
+  readonly theme: Theme;
+};
+
+export const App: React.SFC<AppProps> = ({ theme }) => (
+  <Router>
+    <ThemeProvider theme={theme}>
+      <>
+        <PageView />
+        <Routes />
+        <ScrollToHash />
+      </>
+    </ThemeProvider>
+  </Router>
 );
 
 export default App;

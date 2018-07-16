@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Share from '../Share';
-import SourceCodeLink from '../SourceCodeLink';
+import Share from './Share';
+import SourceCodeLink from './SourceCodeLink';
 
 const Wrapper = styled.div`
   margin: 0 auto var(--xs-space);
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const FooterActions = () => (
+export const FooterActions: React.SFC = () => (
   <Wrapper>
     <Share />
     <SourceCodeLink />

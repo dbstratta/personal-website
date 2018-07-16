@@ -1,12 +1,12 @@
 import React from 'react';
 
-import About from '../../components/About';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import NavBar from '../../components/NavBar';
-import Splash from '../../components/Splash';
+import About from './About';
+import Splash from './Splash';
 
-export const Home = () => (
+export const Home: React.SFC = () => (
   <>
     <NavBar />
     <Splash />

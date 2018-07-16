@@ -12,7 +12,7 @@
   "homepage": "https://diegostratta.com",
   "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "cross-env HTTPS=true react-app-rewired start",
     "build": "react-app-rewired build",
     "prebuild": "yarn typecheck:ts && yarn clean",
     "test": "yarn test:unit && yarn test:e2e",
@@ -78,6 +78,7 @@
     "@types/react-router-dom": "4.2.7",
     "babel-eslint": "8.2.6",
     "codecov": "3.0.4",
+    "cross-env": "^5.2.0",
     "danger": "3.7.20",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",

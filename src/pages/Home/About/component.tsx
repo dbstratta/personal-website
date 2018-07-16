@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SectionHeading from '../SectionHeading';
+import SectionHeading from '../../../components/SectionHeading';
 
 const StyledSection = styled.section`
   width: var(--main-content-width);
@@ -12,7 +12,7 @@ const StyledSection = styled.section`
   }
 `;
 
-export const About = () => (
+export const About: React.SFC = () => (
   <StyledSection id="about">
     <SectionHeading>About</SectionHeading>
   </StyledSection>

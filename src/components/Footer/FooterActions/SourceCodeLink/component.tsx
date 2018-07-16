@@ -9,7 +9,7 @@ const StyledLink = styled.a`
   border: none;
 `;
 
-export const SourceCodeLink = () => (
+export const SourceCodeLink: React.SFC = () => (
   <StyledLink
     href="https://github.com/strattadb/portfolio"
     rel="noopener noreferrer"
