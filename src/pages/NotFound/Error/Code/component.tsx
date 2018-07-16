@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import ColorIncrement from '../../../../components/ColorIncrement';
 
-export type CodeProps = {
-  readonly code: number;
-};
+export type CodeProps = Readonly<{
+  code: number;
+}>;
 
 const StyledColorIncrement = styled(ColorIncrement)`
   font-size: calc(var(--xxl-font-size) * 1.5);
@@ -15,7 +15,7 @@ const StyledColorIncrement = styled(ColorIncrement)`
   }
 `;
 
-export const Code = ({ code }: CodeProps) => (
+export const Code: React.SFC<CodeProps> = ({ code }) => (
   <StyledColorIncrement>{code}</StyledColorIncrement>
 );
 

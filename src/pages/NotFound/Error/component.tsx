@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import Code from './Code';
 import LinkToHomepage from './LinkToHomepage';
 
-export type ErrorProps = {
-  readonly code: number;
-  readonly message: string;
-};
+export type ErrorProps = Readonly<{
+  code: number;
+  message: string;
+}>;
 
 const Grid = styled.div`
   text-align: center;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import JobTitle from './JobTitle';
 import Name from './Name';
 
 const Wrapper = styled.div`
@@ -13,27 +14,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const JobTitle = styled.div`
-  text-align: center;
-  line-height: 3rem;
-
-  font-family: var(--handwriting-font-family);
-  font-size: calc(var(--xl-font-size));
-
-  color: var(--secondary-font-color);
-  text-transform: lowercase;
-
-  transition: var(--lg-transition);
-
-  :hover {
-    color: var(--primary-font-color);
-  }
-`;
-
-export const LeftPane = () => (
+export const LeftPane: React.SFC = () => (
   <Wrapper>
     <Name />
-    <JobTitle>Web Developer</JobTitle>
+    <JobTitle />
   </Wrapper>
 );
 

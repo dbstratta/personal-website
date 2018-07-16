@@ -26,7 +26,7 @@ const StyledSocial = styled(Social)`
   text-align: center;
 `;
 
-export const RightPane = () => (
+export const RightPane: React.SFC = () => (
   <Wrapper>
     <ShortAbout />
     <Separator />

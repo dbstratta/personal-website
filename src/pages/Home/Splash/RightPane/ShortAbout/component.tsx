@@ -21,11 +21,11 @@ const ReadMoreWrapper = styled.span`
   animation: var(--wait-and-fade-in-keyframe) 3s;
 `;
 
-export const ShortAbout = () => (
+export const ShortAbout: React.SFC = () => (
   <Wrapper>
     Hi! I'm a full-stack web developer from Montevideo, Uruguay.{' '}
     <ReadMoreWrapper>
-      <Link to={{ hash: '#about' }}>Read more</Link>.
+      <Link to="#about">Read more</Link>.
     </ReadMoreWrapper>
   </Wrapper>
 );

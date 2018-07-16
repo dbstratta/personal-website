@@ -5,8 +5,6 @@ import React from 'react';
 import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
 
-const Wrapper = 'div';
-
 export type SocialProps = Readonly<{
   className?: string;
 }>;
@@ -81,11 +79,11 @@ const EmailLink: React.SFC = () => (
 );
 
 export const Social: React.SFC<SocialProps> = ({ className }) => (
-  <Wrapper className={className}>
+  <div className={className}>
     <GitHubLink />
     <LinkedInLink />
     <EmailLink />
-  </Wrapper>
+  </div>
 );
 
 export default Social;

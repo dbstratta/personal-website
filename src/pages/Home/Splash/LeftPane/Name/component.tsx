@@ -16,19 +16,10 @@ const StyledColorIncrement = styled(ColorIncrement)`
   }
 `;
 
-const FirstName = () => <div>Diego</div>;
-const LastName = () => <div>Stratta</div>;
-
-const FullName = () => (
-  <>
-    <FirstName />
-    <LastName />
-  </>
-);
-
 export const Name: React.SFC = () => (
   <StyledColorIncrement>
-    <FullName />
+    <div>Diego</div>
+    <div>Stratta</div>
   </StyledColorIncrement>
 );
 
