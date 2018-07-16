@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledFooter = styled.footer`
+import Copyright from './Copyright';
+import FooterActions from './FooterActions';
+
+const Wrapper = styled.footer`
   text-align: center;
   color: var(--tertiary-font-color);
 
@@ -9,13 +12,15 @@ const StyledFooter = styled.footer`
 
   flex: 0 0 auto;
 
+  width: var(--main-content-width);
   margin: var(--xl-space) auto var(--sm-space);
 `;
 
-const currentYear = new Date().getFullYear();
-
 export const Footer = () => (
-  <StyledFooter>Copyright © {currentYear} Diego Stratta</StyledFooter>
+  <Wrapper>
+    <FooterActions />
+    <Copyright />
+  </Wrapper>
 );
 
 export default Footer;

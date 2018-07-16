@@ -12,10 +12,10 @@ const StyledSection = styled.section`
   }
 `;
 
-export const Contact = () => (
-  <StyledSection id="contact">
-    <SectionHeading>Contact</SectionHeading>
+export const About = () => (
+  <StyledSection id="about">
+    <SectionHeading>About</SectionHeading>
   </StyledSection>
 );
 
-export default Contact;
+export default About;

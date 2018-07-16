@@ -9,4 +9,13 @@ describe('index page', () => {
     expect(text).toContain('Diego');
     expect(text).toContain('Stratta');
   });
+
+  test('contains a non-empty <noscript /> tag', async () => {
+    const noscriptTextContent = await page.$eval(
+      'noscript',
+      noscript => noscript.textContent,
+    );
+
+    expect(noscriptTextContent).not.toEqual('');
+  });
 });

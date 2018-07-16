@@ -18,7 +18,7 @@ test_script:
   - npm --version
   - yarn --version
 
-  - yarn test
+  - yarn test:unit
 
 cache:
  - "%LOCALAPPDATA%\\Yarn"

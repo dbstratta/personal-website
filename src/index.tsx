@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { hydrate, render } from 'react-dom';
+import { render } from 'react-dom';
 
 import './globalStyles';
 
@@ -17,16 +17,12 @@ function main(): void {
   const rootElement = document.getElementById('root');
 
   if (!rootElement) {
-    return;
+    throw new Error('root element not found');
   }
 
   const rootReactElement = <Root theme={theme} />;
 
-  if (rootElement.hasChildNodes()) {
-    hydrate(rootReactElement, rootElement);
-  } else {
-    render(rootReactElement, rootElement);
-  }
+  render(rootReactElement, rootElement);
 
   registerServiceWorker();
 }

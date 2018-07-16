@@ -22,7 +22,7 @@ injectGlobal`
     --display-font-family: var(--serif-font-family);
     --handwriting-font-family: 'La Belle Aurore', sans-serif;
 
-    --primary-color-hue: 200;
+    --primary-color-hue: ${theme.colors.primaryColorHue};
     --primary-color: hsla(var(--primary-color-hue), 100%, 50%, 1);
 
     --primary-font-color: hsla(0, 0%, 10%, 1);
@@ -56,7 +56,7 @@ injectGlobal`
     --fade-up-in-keyframe: ${fadeUpInKeyframe};
 
   @media (min-width: ${theme.breakpoints.lg}) {
-    --main-content-width: 95%;
+    --main-content-width: 80%;
   }
  }
 
@@ -81,7 +81,7 @@ injectGlobal`
     font-size: var(--md-font-size);
     color: var(--primary-font-color);
 
-    scroll-behavior: smooth;
+    line-height: 1.15;
   }
 
   #root {
@@ -89,7 +89,15 @@ injectGlobal`
     flex-flow: column nowrap;
   }
 
-  ::selection {
-    background-color: hsla(var(--primary-color-hue), 100%, 80%, 1);
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+
+    margin: 0;
   }
 `;

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { analytics } from '../../helpers';
+import { initializeGoogleAnalytics } from '../../analytics';
 import { Theme } from '../../theme';
 import App from '../App';
 
-analytics.initializeGoogleAnalytics();
+initializeGoogleAnalytics();
 
 export type RootProps = {
   readonly theme: Theme;
@@ -16,7 +16,9 @@ export type RootProps = {
 export const Root = ({ theme }: RootProps) => (
   <Router>
     <ThemeProvider theme={theme}>
-      <App />
+      <StrictMode>
+        <App />
+      </StrictMode>
     </ThemeProvider>
   </Router>
 );

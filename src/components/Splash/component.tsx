@@ -29,6 +29,9 @@ const Grid = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-columns: [grid-left] 6fr 7fr [grid-right];
     grid-template-rows: [grid-top] 1fr [grid-bottom];
+
+    padding-bottom: var(--xl-space);
+    min-height: 90vh;
   }
 `;
 

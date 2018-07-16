@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import { getPrimaryColorHue } from '../../helpers';
+import theme from '../../theme';
 import Interval from '../Interval';
 
 export type ColorHueIncrementatorProps = {
@@ -24,7 +24,7 @@ export class ColorHueIncrementator extends PureComponent<
   };
 
   private getInitialColorHue() {
-    return this.props.initialColorHue || getPrimaryColorHue();
+    return this.props.initialColorHue || theme.colors.primaryColorHue;
   }
 
   private changeColorHue = (): void => {
