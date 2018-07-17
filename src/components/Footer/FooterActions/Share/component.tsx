@@ -1,7 +1,10 @@
+import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { Event, sendAnalyticsEvent } from '../../../../analytics';
+import { footerLinkStyle } from '../FooterLink';
 
 type NavigatorShareFnArgs = {
   url: USVString;
@@ -13,38 +16,36 @@ type NavigatorShareFn = (data: NavigatorShareFnArgs) => Promise<void>;
 
 type NavigatorShare = Navigator & { share: NavigatorShareFn };
 
-const StyledButton = styled.button`
-  text-decoration: underline;
-  cursor: pointer;
-  color: inherit;
-  background-color: inherit;
-  border: none;
-`;
-
 export class Share extends PureComponent {
   private readonly handleClick = (): Promise<void> => this.shareWebsite();
 
   private readonly shareWebsite = async (): Promise<void> => {
+    if (!('share' in (navigator as NavigatorShare))) {
+      return;
+    }
+
+    const url = window.location.href;
+
     try {
       await (navigator as NavigatorShare).share({
-        url: window.location.href,
-        text: 'Diego Stratta',
+        url,
+        text: 'Diego Stratta | Web Developer',
         title: document.title,
       });
 
-      this.sendShareSuccessAnalyticsEvent();
+      this.sendShareSuccessAnalyticsEvent(url);
     } catch (e) {
-      this.sendShareFailureAnalyticsEvent();
+      this.sendShareFailureAnalyticsEvent(url);
     }
   };
 
-  private readonly sendShareSuccessAnalyticsEvent = (): void => {
-    const event: Event = { category: 'Share', action: 'share' };
+  private readonly sendShareSuccessAnalyticsEvent = (url: string): void => {
+    const event: Event = { category: 'Share', action: 'share', label: url };
     sendAnalyticsEvent(event);
   };
 
-  private readonly sendShareFailureAnalyticsEvent = (): void => {
-    const event: Event = { category: 'Share', action: 'cancel' };
+  private readonly sendShareFailureAnalyticsEvent = (url: string): void => {
+    const event: Event = { category: 'Share', action: 'cancel', label: url };
     sendAnalyticsEvent(event);
   };
 
@@ -54,9 +55,21 @@ export class Share extends PureComponent {
     }
 
     return (
-      <StyledButton onClick={this.handleClick}>Share this website</StyledButton>
+      <StyledButton onClick={this.handleClick}>
+        <StyledFontAwesomeIcon icon={faShareAlt} size="sm" />
+        Share this page
+      </StyledButton>
     );
   }
 }
+
+const StyledButton = styled.button`
+  ${footerLinkStyle};
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  margin-right: var(--xs-space);
+  color: var(--quaternary-font-color);
+`;
 
 export default Share;

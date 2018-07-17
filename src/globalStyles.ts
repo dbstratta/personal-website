@@ -42,6 +42,7 @@ injectGlobal`
     --primary-font-color: hsla(0, 0%, 10%, 1);
     --secondary-font-color: hsla(0, 0%, 30%, 1);
     --tertiary-font-color: hsla(0, 0%, 40%, 1);
+    --quaternary-font-color: hsla(0, 0%, 70%, 1);
 
     --separator-color: hsla(0, 0%, 70%, 1);
 
@@ -67,11 +68,15 @@ injectGlobal`
 
     --main-content-width: 80%;
 
+    --nav-bar-height: 2rem;
+
     --fade-up-in-keyframe: ${fadeUpInKeyframe};
     --wait-and-fade-in-keyframe: ${waitAndFadeInKeyframe};
 
   @media (min-width: ${theme.breakpoints.lg}) {
     --main-content-width: 80%;
+
+    --nav-bar-height: 3rem;
   }
  }
 

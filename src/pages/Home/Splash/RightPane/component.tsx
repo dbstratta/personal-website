@@ -5,12 +5,22 @@ import Separator from '../../../../components/Separator';
 import ShortAbout from './ShortAbout';
 import Social from './Social';
 
+export const RightPane: React.SFC = () => (
+  <Wrapper>
+    <ShortAbout />
+    <SeparatorAndSocialWrapper>
+      <Separator />
+      <StyledSocial />
+    </SeparatorAndSocialWrapper>
+  </Wrapper>
+);
+
 const Wrapper = styled.div`
   justify-self: center;
   align-self: start;
 
   width: 100%;
-  margin-top: var(--lg-space);
+  margin-top: var(--md-space);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     justify-self: start;
@@ -21,17 +31,13 @@ const Wrapper = styled.div`
   }
 `;
 
+const SeparatorAndSocialWrapper = styled.div`
+  max-width: 44rem;
+`;
+
 const StyledSocial = styled(Social)`
   margin-top: var(--md-space);
   text-align: center;
 `;
-
-export const RightPane: React.SFC = () => (
-  <Wrapper>
-    <ShortAbout />
-    <Separator />
-    <StyledSocial />
-  </Wrapper>
-);
 
 export default RightPane;

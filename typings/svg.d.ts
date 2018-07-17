@@ -1,5 +1,5 @@
 declare module '*.svg' {
-  import * as React from 'react';
+  import React from 'react';
 
   const value: string;
 

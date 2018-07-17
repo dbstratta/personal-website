@@ -13,7 +13,11 @@ const Wrapper = styled.footer`
   flex: 0 0 auto;
 
   width: var(--main-content-width);
-  margin: var(--xl-space) auto var(--sm-space);
+  margin: var(--md-space) auto var(--sm-space);
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    margin-top: var(--xl-space);
+  }
 `;
 
 export const Footer = () => (

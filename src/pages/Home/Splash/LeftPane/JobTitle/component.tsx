@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
 
   transition: var(--lg-transition);
 
-  :hover {
+  &:hover {
     color: var(--primary-font-color);
   }
 `;

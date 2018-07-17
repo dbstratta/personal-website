@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import Footer from '../../components/Footer';
-import About from './About';
-import Contact from './Contact';
+import NavBar from '../../components/NavBar';
 import Splash from './Splash';
 
 const ContentWrapper = styled.main`
@@ -18,13 +17,13 @@ const ContentWrapper = styled.main`
 export const Home: React.SFC = () => (
   <>
     <Helmet>
-      <title>Diego Stratta</title>
+      <title>Diego Stratta | Web Developer</title>
     </Helmet>
+
+    <NavBar />
 
     <ContentWrapper>
       <Splash />
-      <About />
-      <Contact />
     </ContentWrapper>
 
     <Footer />

@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 
 const Separator = styled.div`
-  background-color: var(--separator-color);
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    transparent 20%,
+    var(--separator-color) 50%,
+    transparent 80%,
+    transparent
+  );
 
   height: 0.07rem;
   width: 100%;

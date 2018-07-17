@@ -1,3 +1,5 @@
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
@@ -8,6 +10,11 @@ const StyledLink = styled(OutboundLink)`
   ${footerLinkStyle};
 `;
 
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  margin-right: var(--xs-space);
+  color: var(--quaternary-font-color);
+`;
+
 export const SourceCodeLink: React.SFC = () => (
   <StyledLink
     to="https://github.com/strattadb/portfolio"
@@ -15,6 +22,7 @@ export const SourceCodeLink: React.SFC = () => (
     rel="noopener noreferrer"
     target="_blank"
   >
+    <StyledFontAwesomeIcon icon={faCode} size="sm" />
     Check the source code
   </StyledLink>
 );
