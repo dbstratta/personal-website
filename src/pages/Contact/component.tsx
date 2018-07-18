@@ -10,6 +10,7 @@ export const Contact: React.SFC = () => (
   <>
     <Helmet>
       <title>Diego Stratta | Contact</title>
+      <link rel="canonical" href="https://diegostratta.com/contact" />
     </Helmet>
 
     <NavBar />
