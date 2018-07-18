@@ -1,15 +1,9 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import Link from '../Link';
-
-export const NavBar: React.SFC = () => (
-  <StyledNav>
-    <LogoWrapper>
-      <Logo to="/">Diego Stratta</Logo>
-    </LogoWrapper>
-  </StyledNav>
-);
+import NavLinks from './NavLinks';
+import NavMenu from './NavMenu';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -23,7 +17,7 @@ const StyledNav = styled.nav`
 
   font-size: var(--lg-font-size);
 
-  margin: 0 auto var(--xs-space);
+  margin: var(--xs-space) auto var(--xs-space);
   width: var(--main-content-width);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
@@ -48,5 +42,34 @@ const Logo = styled(Link)`
     text-shadow: none;
   }
 `;
+
+export type NavBarProps = Readonly<{}>;
+
+export type NavBarState = Readonly<{
+  menuOpen: boolean;
+}>;
+
+export class NavBar extends PureComponent<NavBarProps, NavBarState> {
+  public state: NavBarState = { menuOpen: false };
+
+  private readonly handleMenuClick = (): void => this.toggleMenu();
+
+  private readonly toggleMenu = (): void =>
+    this.setState(prevState => ({ menuOpen: !prevState.menuOpen }));
+
+  public render() {
+    return (
+      <>
+        <StyledNav>
+          <LogoWrapper>
+            <Logo to="/">Diego Stratta</Logo>
+          </LogoWrapper>
+          <NavLinks onMenuClick={this.handleMenuClick} />
+        </StyledNav>
+        <NavMenu open={this.state.menuOpen} />
+      </>
+    );
+  }
+}
 
 export default NavBar;

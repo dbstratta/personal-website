@@ -66,7 +66,7 @@ injectGlobal`
     --md-transition: 0.2s;
     --lg-transition: 0.3s;
 
-    --main-content-width: 80%;
+    --main-content-width: 90%;
 
     --nav-bar-height: 2rem;
 
@@ -76,7 +76,7 @@ injectGlobal`
   @media (min-width: ${theme.breakpoints.lg}) {
     --main-content-width: 80%;
 
-    --nav-bar-height: 3rem;
+    --nav-bar-height: 2.5rem;
   }
  }
 
