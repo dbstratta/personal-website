@@ -30,7 +30,7 @@ export const AboutContent: React.SFC = () => (
         successful products.
       </StyledParagraph>
       <StyledParagraph>
-        When I'm not developing things, I'm probably riding my bycicle,
+        When I'm not developing things, I'm probably riding my bicycle,
         binge-watching something on Netflix or practicing my dancing skills!
       </StyledParagraph>
     </ParagraphsWrapper>
