@@ -6,19 +6,23 @@ import NavLinks from './NavLinks';
 import NavMenu from './NavMenu';
 
 const StyledNav = styled.nav`
+  flex-shrink: 0;
+
+  width: var(--main-content-width);
+  margin: auto;
+`;
+
+const BarWrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
 
   justify-content: flex-end;
   align-items: center;
 
-  flex-shrink: 0;
-  height: var(--nav-bar-height);
-
   font-size: var(--lg-font-size);
 
+  height: var(--nav-bar-height);
   margin: var(--xs-space) auto var(--xs-space);
-  width: var(--main-content-width);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     margin-bottom: var(--md-space);
@@ -59,15 +63,15 @@ export class NavBar extends PureComponent<NavBarProps, NavBarState> {
 
   public render() {
     return (
-      <>
-        <StyledNav>
+      <StyledNav>
+        <BarWrapper>
           <LogoWrapper>
             <Logo to="/">Diego Stratta</Logo>
           </LogoWrapper>
           <NavLinks onMenuClick={this.handleMenuClick} />
-        </StyledNav>
+        </BarWrapper>
         <NavMenu open={this.state.menuOpen} />
-      </>
+      </StyledNav>
     );
   }
 }

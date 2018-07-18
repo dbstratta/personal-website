@@ -40,7 +40,7 @@ const StyledButton = styled.button`
 export const NavLinks = ({ onMenuClick }: NavLinksProps) => (
   <Wrapper>
     <BarLinks />
-    <StyledButton onClick={onMenuClick}>
+    <StyledButton onClick={onMenuClick} aria-label="Toggle navigation menu">
       <FontAwesomeIcon icon={faBars} />
     </StyledButton>
   </Wrapper>
