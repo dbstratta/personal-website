@@ -24,7 +24,7 @@ export class Share extends PureComponent {
       return;
     }
 
-    const url = window.location.href;
+    const url = window.location.origin;
 
     try {
       await (navigator as NavigatorShare).share({
@@ -33,19 +33,19 @@ export class Share extends PureComponent {
         title: document.title,
       });
 
-      this.sendShareSuccessAnalyticsEvent(url);
+      this.sendShareSuccessAnalyticsEvent();
     } catch (e) {
-      this.sendShareFailureAnalyticsEvent(url);
+      this.sendShareFailureAnalyticsEvent();
     }
   };
 
-  private readonly sendShareSuccessAnalyticsEvent = (url: string): void => {
-    const event: Event = { category: 'Share', action: 'share', label: url };
+  private readonly sendShareSuccessAnalyticsEvent = (): void => {
+    const event: Event = { category: 'Share', action: 'share' };
     sendAnalyticsEvent(event);
   };
 
-  private readonly sendShareFailureAnalyticsEvent = (url: string): void => {
-    const event: Event = { category: 'Share', action: 'cancel', label: url };
+  private readonly sendShareFailureAnalyticsEvent = (): void => {
+    const event: Event = { category: 'Share', action: 'cancel' };
     sendAnalyticsEvent(event);
   };
 
@@ -57,7 +57,7 @@ export class Share extends PureComponent {
     return (
       <StyledButton onClick={this.handleClick}>
         <StyledFontAwesomeIcon icon={faShareAlt} size="sm" />
-        Share this page
+        Share this website
       </StyledButton>
     );
   }

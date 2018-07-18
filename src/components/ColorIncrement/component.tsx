@@ -5,7 +5,7 @@ import ColorHueIncrement, {
   ColorHueIncrementProps,
 } from '../ColorHueIncrement';
 
-export type ColorIncrementBaseProps = Readonly<{
+export type BaseColorIncrementProps = Readonly<{
   colorHue: number;
   className?: string;
 }>;
@@ -18,7 +18,7 @@ const Wrapper = styled.div.attrs({
   transition: var(--lg-transition);
 ` as any;
 
-export const BaseColorIncrement: React.SFC<ColorIncrementBaseProps> = ({
+export const BaseColorIncrement: React.SFC<BaseColorIncrementProps> = ({
   colorHue,
   className,
   children,
@@ -28,7 +28,7 @@ export const BaseColorIncrement: React.SFC<ColorIncrementBaseProps> = ({
   </Wrapper>
 );
 
-export type ColorIncrementProps = Pick<ColorIncrementBaseProps, 'className'> &
+export type ColorIncrementProps = Pick<BaseColorIncrementProps, 'className'> &
   Pick<ColorHueIncrementProps, 'delay' | 'initialColorHue'> & {
     children?: React.ReactNode;
   };
@@ -43,11 +43,9 @@ const ColorIncrement: React.SFC<ColorIncrementProps> = ({
     delay={delay}
     initialColorHue={initialColorHue}
     render={({ colorHue }) => (
-      <BaseColorIncrement
-        className={className}
-        colorHue={colorHue}
-        children={children}
-      />
+      <BaseColorIncrement className={className} colorHue={colorHue}>
+        {children}
+      </BaseColorIncrement>
     )}
   />
 );

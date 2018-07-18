@@ -4,22 +4,22 @@ import { Helmet } from 'react-helmet';
 import Footer from '../../components/Footer';
 import Main from '../../components/Main';
 import NavBar from '../../components/NavBar';
-import Splash from './Splash';
+import SectionHeading from '../../components/SectionHeading';
 
-export const Home: React.SFC = () => (
+export const Contact: React.SFC = () => (
   <>
     <Helmet>
-      <title>Diego Stratta | Web Developer</title>
+      <title>Diego Stratta | Contact</title>
     </Helmet>
 
     <NavBar />
 
     <Main>
-      <Splash />
+      <SectionHeading>Contact</SectionHeading>
     </Main>
 
     <Footer />
   </>
 );
 
-export default Home;
+export default Contact;

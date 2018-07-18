@@ -3,6 +3,15 @@ import styled from 'styled-components';
 
 import Link from '../../../../../components/Link';
 
+export const ShortAbout: React.SFC = () => (
+  <Wrapper>
+    Hi! I'm a full-stack web developer from Montevideo, Uruguay.{' '}
+    <ReadMoreWrapper>
+      <Link to="/about">Read more</Link>.
+    </ReadMoreWrapper>
+  </Wrapper>
+);
+
 const Wrapper = styled.div`
   color: var(--secondary-font-color);
   font-size: calc(var(--lg-font-size) * 1.2);
@@ -20,14 +29,5 @@ const Wrapper = styled.div`
 const ReadMoreWrapper = styled.span`
   animation: var(--wait-and-fade-in-keyframe) 3s;
 `;
-
-export const ShortAbout: React.SFC = () => (
-  <Wrapper>
-    Hi! I'm a full-stack web developer from Montevideo, Uruguay.{' '}
-    <ReadMoreWrapper>
-      <Link to="#about">Read more</Link>.
-    </ReadMoreWrapper>
-  </Wrapper>
-);
 
 export default ShortAbout;

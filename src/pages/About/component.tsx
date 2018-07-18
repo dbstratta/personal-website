@@ -4,22 +4,22 @@ import { Helmet } from 'react-helmet';
 import Footer from '../../components/Footer';
 import Main from '../../components/Main';
 import NavBar from '../../components/NavBar';
-import Splash from './Splash';
+import AboutContent from './AboutContent';
 
-export const Home: React.SFC = () => (
+export const About: React.SFC = () => (
   <>
     <Helmet>
-      <title>Diego Stratta | Web Developer</title>
+      <title>Diego Stratta | About</title>
     </Helmet>
 
     <NavBar />
 
     <Main>
-      <Splash />
+      <AboutContent />
     </Main>
 
     <Footer />
   </>
 );
 
-export default Home;
+export default About;

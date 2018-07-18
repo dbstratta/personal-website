@@ -1,0 +1,53 @@
+import React from 'react';
+import styled from 'styled-components';
+
+import OutboundLink from '../../../components/OutboundLink';
+import PageHeading from '../../../components/PageHeading';
+
+export const AboutContent: React.SFC = () => (
+  <section>
+    <PageHeading>About</PageHeading>
+    <ParagraphsWrapper>
+      <StyledParagraph>
+        Hi! I'm Diego. I'm a web developer, open source enthusiast and computer
+        engineering student based in Montevideo, Uruguay.
+      </StyledParagraph>
+      <StyledParagraph>
+        <strong>I love building things for the web!</strong> When I discovered
+        web development back in 2016, it became my passion.
+        <br />
+        Since then, I've developed many awesome projects, including my most
+        ambitious so far,{' '}
+        <OutboundLink
+          to="https://github.com/strattadb/margaret"
+          eventLabel="Margaret GitHub page"
+        >
+          Margaret
+        </OutboundLink>.
+      </StyledParagraph>
+      <StyledParagraph>
+        I firmly believe in building strong teams as a way to deliver great
+        products.
+      </StyledParagraph>
+      <StyledParagraph>
+        When I'm not developing things, I'm probably riding my bycicle,
+        binge-watching something on Netflix or practicing my dancing skills!
+      </StyledParagraph>
+    </ParagraphsWrapper>
+  </section>
+);
+
+const ParagraphsWrapper = styled.div`
+  width: 100%;
+  max-width: 50rem;
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    width: 60%;
+  }
+`;
+
+const StyledParagraph = styled.p`
+  font-size: var(--lg-font-size);
+`;
+
+export default AboutContent;

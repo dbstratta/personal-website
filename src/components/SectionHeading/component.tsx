@@ -6,7 +6,7 @@ export type SectionHeadingProps = Readonly<{
 }>;
 
 const StyledH2 = styled.h2`
-  font-size: calc(var(--xl-font-size) * 1.5);
+  font-size: var(--xl-font-size);
   font-weight: 400;
 `;
 

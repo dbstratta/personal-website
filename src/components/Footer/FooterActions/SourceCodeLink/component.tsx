@@ -18,12 +18,12 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 export const SourceCodeLink: React.SFC = () => (
   <StyledLink
     to="https://github.com/strattadb/portfolio"
-    eventLabel="Website Source Code (GitHub)"
+    eventLabel="Website source code (GitHub)"
     rel="noopener noreferrer"
     target="_blank"
   >
     <StyledFontAwesomeIcon icon={faCode} size="sm" />
-    Check the source code
+    See the source code
   </StyledLink>
 );
 
