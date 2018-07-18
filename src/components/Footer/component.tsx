@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Copyright from './Copyright';
 import FooterActions from './FooterActions';
+import SocialLinks from './SocialLinks';
 
 const Wrapper = styled.footer`
   text-align: center;
@@ -22,6 +23,7 @@ const Wrapper = styled.footer`
 
 export const Footer = () => (
   <Wrapper>
+    <SocialLinks />
     <FooterActions />
     <Copyright />
   </Wrapper>

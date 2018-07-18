@@ -6,7 +6,7 @@ import PageHeading from '../../../components/PageHeading';
 
 export const AboutContent: React.SFC = () => (
   <section>
-    <PageHeading>About</PageHeading>
+    <StyledPageHeading>About</StyledPageHeading>
     <ParagraphsWrapper>
       <StyledParagraph>
         Hi! I'm Diego. I'm a web developer, open source enthusiast and computer
@@ -26,8 +26,8 @@ export const AboutContent: React.SFC = () => (
         </OutboundLink>.
       </StyledParagraph>
       <StyledParagraph>
-        I firmly believe in building strong teams as a way to deliver great
-        products.
+        I firmly believe in building strong teams as a way to deliver great and
+        successful products.
       </StyledParagraph>
       <StyledParagraph>
         When I'm not developing things, I'm probably riding my bycicle,
@@ -37,17 +37,21 @@ export const AboutContent: React.SFC = () => (
   </section>
 );
 
+const StyledPageHeading = styled(PageHeading)`
+  animation: var(--fade-up-in-keyframe) 1s;
+`;
+
 const ParagraphsWrapper = styled.div`
   width: 100%;
   max-width: 50rem;
+
+  font-size: var(--lg-font-size);
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     width: 60%;
   }
 `;
 
-const StyledParagraph = styled.p`
-  font-size: var(--lg-font-size);
-`;
+const StyledParagraph = styled.p``;
 
 export default AboutContent;

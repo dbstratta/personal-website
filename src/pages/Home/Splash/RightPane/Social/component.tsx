@@ -5,51 +5,13 @@ import React from 'react';
 import { OutboundLink } from 'react-ga';
 import styled from 'styled-components';
 
-export type SocialProps = Readonly<{
-  className?: string;
-}>;
-
-export type SocialLinkProps = Readonly<{
-  icon: any;
-  to: string;
-  className?: string;
-  title?: string;
-  eventLabel: string;
-}>;
-
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  color: var(--secondary-font-color);
-  transition: var(--lg-transition);
-
-  :hover {
-    color: var(--primary-font-color);
-  }
-`;
-
-const SocialLink: React.SFC<SocialLinkProps> = ({
-  to,
-  title,
-  className,
-  eventLabel,
-  icon,
-}) => (
-  <OutboundLink
-    to={to}
-    eventLabel={eventLabel}
-    target="_blank"
-    rel="noopener noreferrer"
-    title={title}
-    className={className}
-  >
-    <StyledFontAwesomeIcon icon={icon} size="2x" />
-  </OutboundLink>
+export const Social: React.SFC<SocialProps> = ({ className }) => (
+  <div className={className}>
+    <GitHubLink />
+    <LinkedInLink />
+    <EmailLink />
+  </div>
 );
-
-const StyledSocialLink = styled(SocialLink)`
-  &:not(:first-child) {
-    margin-left: calc(var(--lg-space) * 1.3);
-  }
-`;
 
 const GitHubLink: React.SFC = () => (
   <StyledSocialLink
@@ -78,12 +40,52 @@ const EmailLink: React.SFC = () => (
   />
 );
 
-export const Social: React.SFC<SocialProps> = ({ className }) => (
-  <div className={className}>
-    <GitHubLink />
-    <LinkedInLink />
-    <EmailLink />
-  </div>
+const SocialLink: React.SFC<SocialLinkProps> = ({
+  to,
+  title,
+  className,
+  eventLabel,
+  icon,
+}) => (
+  <OutboundLink
+    to={to}
+    eventLabel={eventLabel}
+    target="_blank"
+    rel="noopener noreferrer"
+    title={title}
+    className={className}
+  >
+    <StyledFontAwesomeIcon icon={icon} />
+  </OutboundLink>
 );
+
+const StyledSocialLink = styled(SocialLink)`
+  &:not(:first-child) {
+    margin-left: calc(var(--lg-space) * 1.3);
+  }
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: var(--secondary-font-color);
+  transition: var(--lg-transition);
+
+  font-size: 1.9em;
+
+  :hover {
+    color: var(--primary-font-color);
+  }
+`;
+
+export type SocialProps = Readonly<{
+  className?: string;
+}>;
+
+export type SocialLinkProps = Readonly<{
+  icon: any;
+  to: string;
+  className?: string;
+  title?: string;
+  eventLabel: string;
+}>;
 
 export default Social;

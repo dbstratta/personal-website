@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../../components/Footer';
 import Main from '../../components/Main';
 import NavBar from '../../components/NavBar';
-import SectionHeading from '../../components/SectionHeading';
+import ContactContent from './ContactContent';
 
 export const Contact: React.SFC = () => (
   <>
@@ -15,7 +15,7 @@ export const Contact: React.SFC = () => (
     <NavBar />
 
     <Main>
-      <SectionHeading>Contact</SectionHeading>
+      <ContactContent />
     </Main>
 
     <Footer />
