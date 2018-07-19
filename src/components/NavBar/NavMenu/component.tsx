@@ -49,6 +49,10 @@ const MenuLi = styled.li`
 
 const StyledLink = styled(Link)`
   color: inherit;
+
+  &:hover {
+    text-shadow: none;
+  }
 `;
 
 const NavMenu: React.SFC<NavMenuProps> = ({ open }) => {

@@ -10,7 +10,7 @@ export const initializeErrorTracking = (): void => {
     debug: !isProductionEnvironment,
   };
 
-  Raven.config(sentryDsn, ravenOptions);
+  Raven.config(sentryDsn, ravenOptions).install();
 };
 
 export const captureException = (

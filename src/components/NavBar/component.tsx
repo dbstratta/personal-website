@@ -62,7 +62,7 @@ export class NavBar extends PureComponent<NavBarProps, NavBarState> {
 
     sendAnalyticsEvent({
       category: 'Button',
-      action: 'Open',
+      action: 'Click',
       label: 'Navigation bar menu',
     });
   };
