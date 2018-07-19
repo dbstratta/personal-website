@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
+import { sendAnalyticsEvent } from '../../analytics';
 import Link from '../Link';
 import NavLinks from './NavLinks';
 import NavMenu from './NavMenu';
@@ -56,7 +57,15 @@ export type NavBarState = Readonly<{
 export class NavBar extends PureComponent<NavBarProps, NavBarState> {
   public state: NavBarState = { menuOpen: false };
 
-  private readonly handleMenuClick = (): void => this.toggleMenu();
+  private readonly handleMenuClick = (): void => {
+    this.toggleMenu();
+
+    sendAnalyticsEvent({
+      category: 'Button',
+      action: 'Open',
+      label: 'Navigation bar menu',
+    });
+  };
 
   private readonly toggleMenu = (): void =>
     this.setState(prevState => ({ menuOpen: !prevState.menuOpen }));

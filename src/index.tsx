@@ -9,12 +9,14 @@ import './globalStyles';
 
 import { initializeAnalytics } from './analytics';
 import Root from './components/Root';
+import { initializeErrorTracking } from './errorTracking';
 import { register as registerServiceWorker } from './serviceWorker';
 
 main();
 
 function main(): void {
   initializeAnalytics();
+  initializeErrorTracking();
 
   render();
 

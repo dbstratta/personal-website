@@ -10,7 +10,7 @@ export const AboutContent: React.SFC = () => (
     <ParagraphsWrapper>
       <StyledParagraph>
         Hi! I'm Diego. I'm a web developer, open source enthusiast and computer
-        engineering student based in Montevideo, Uruguay.
+        engineering student living in Montevideo, Uruguay.
       </StyledParagraph>
       <StyledParagraph>
         <strong>I love building things for the web!</strong> When I discovered
@@ -20,6 +20,8 @@ export const AboutContent: React.SFC = () => (
         ambitious so far,{' '}
         <OutboundLink
           to="https://github.com/strattadb/margaret"
+          target="_blank"
+          rel="noopener noreferrer"
           eventLabel="Margaret GitHub page"
         >
           Margaret

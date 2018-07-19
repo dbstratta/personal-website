@@ -1,6 +1,6 @@
 import ReactGA from 'react-ga';
 
-import { isProductionEnvironment } from '../helpers/environments';
+import { isProductionEnvironment } from '../helpers';
 import { Event } from './events';
 
 export const initializeAnalytics = (): void => {

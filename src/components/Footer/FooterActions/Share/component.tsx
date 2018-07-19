@@ -40,12 +40,12 @@ export class Share extends PureComponent {
   };
 
   private readonly sendShareSuccessAnalyticsEvent = (): void => {
-    const event: Event = { category: 'Share', action: 'share' };
+    const event: Event = { category: 'Share', action: 'Share' };
     sendAnalyticsEvent(event);
   };
 
   private readonly sendShareFailureAnalyticsEvent = (): void => {
-    const event: Event = { category: 'Share', action: 'cancel' };
+    const event: Event = { category: 'Share', action: 'Cancel' };
     sendAnalyticsEvent(event);
   };
 
@@ -55,7 +55,7 @@ export class Share extends PureComponent {
     }
 
     return (
-      <StyledButton onClick={this.handleClick}>
+      <StyledButton onClick={this.handleClick} aria-label="Share this website">
         <StyledFontAwesomeIcon icon={faShareAlt} size="sm" />
         Share this website
       </StyledButton>

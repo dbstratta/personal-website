@@ -28,6 +28,10 @@ const StyledLi = styled.li`
 
 const StyledLink = styled(Link)`
   color: inherit;
+
+  &:hover {
+    text-shadow: none;
+  }
 `;
 
 const BarLinks = () => (

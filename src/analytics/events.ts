@@ -6,4 +6,4 @@ export type Event = {
   nonInteraction?: boolean;
 };
 
-export type EventCategory = 'Share';
+export type EventCategory = 'Share' | 'Button';

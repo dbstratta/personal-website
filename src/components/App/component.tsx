@@ -6,6 +6,7 @@ import { Theme } from '../../theme';
 import PageView from '../PageView';
 import Routes from './Routes';
 
+import ErrorBoundary from './ErrorBoundary';
 import ScrollToHash from './ScrollToHash';
 import ScrollToTop from './ScrollToTop';
 
@@ -16,12 +17,12 @@ export type AppProps = Readonly<{
 export const App: React.SFC<AppProps> = ({ theme }) => (
   <Router>
     <ThemeProvider theme={theme}>
-      <>
+      <ErrorBoundary>
         <ScrollToTop />
         <PageView />
         <Routes />
         <ScrollToHash />
-      </>
+      </ErrorBoundary>
     </ThemeProvider>
   </Router>
 );

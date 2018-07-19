@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import OutboundLink from '../../../components/OutboundLink';
+import Mailto from '../../../components/Mailto';
 import PageHeading from '../../../components/PageHeading';
 
 export const ContactContent: React.SFC = () => (
@@ -15,9 +15,7 @@ export const ContactContent: React.SFC = () => (
         I'll try to get back to you as soon as I can.
       </StyledParagraph>
       <StyledEmailParagraph>
-        <OutboundLink to="mailto:strattadb@gmail.com" eventLabel="Email">
-          strattadb@gmail.com
-        </OutboundLink>
+        <Mailto email="strattadb@gmail.com">strattadb@gmail.com</Mailto>
       </StyledEmailParagraph>
     </ParagraphsWrapper>
   </section>
