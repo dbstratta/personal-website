@@ -1,4 +1,4 @@
-FROM node:10.6.0 AS builder
+FROM node:10.7.0 AS builder
 
 ENV NODE_ENV=${NODE_ENV:-production}
 
