@@ -3394,9 +3394,9 @@ damerau-levenshtein@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.4.tgz#03191c432cb6eea168bb77f3a55ffdccb8978514"
 
-danger@3.7.20:
-  version "3.7.20"
-  resolved "https://registry.yarnpkg.com/danger/-/danger-3.7.20.tgz#1af0d85c417b23489eaa55a8b766382f513736bc"
+danger@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/danger/-/danger-3.8.0.tgz#04d61683195ddd98e9395342d9d1985a4aacacef"
   dependencies:
     "@octokit/rest" "^15.5.0"
     babel-polyfill "^6.23.0"
@@ -3404,6 +3404,7 @@ danger@3.7.20:
     commander "^2.13.0"
     debug "^3.1.0"
     get-stdin "^6.0.0"
+    https-proxy-agent "^2.2.1"
     hyperlinker "^1.0.0"
     jsome "^2.3.25"
     json5 "^1.0.0"
