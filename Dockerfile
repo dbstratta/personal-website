@@ -1,4 +1,4 @@
-FROM node:10.6.0 AS builder
+FROM node:10.7.0 AS builder
 
 ENV NODE_ENV=${NODE_ENV:-production}
 
@@ -15,7 +15,7 @@ COPY . .
 
 RUN yarn build
 
-FROM nginx:1.15.1-alpine
+FROM nginx:1.15.2-alpine
 
 COPY --from=builder /usr/src/app/build/ /usr/share/nginx/html/
 
