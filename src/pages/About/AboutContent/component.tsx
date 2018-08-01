@@ -25,7 +25,8 @@ export const AboutContent: React.SFC = () => (
           eventLabel="Margaret GitHub page"
         >
           Margaret
-        </OutboundLink>.
+        </OutboundLink>
+        .
       </StyledParagraph>
       <StyledParagraph>
         I firmly believe in building strong teams as a way to deliver great and

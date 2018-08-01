@@ -24,5 +24,6 @@
     "**/.DS_Store": true,
     "**/dist": true,
     "**/node_data": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
