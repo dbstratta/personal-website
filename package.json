@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.2",
     "@fortawesome/free-brands-svg-icons": "5.2.0",
     "@fortawesome/free-solid-svg-icons": "5.2.0",
-    "@fortawesome/react-fontawesome": "0.1.0",
+    "@fortawesome/react-fontawesome": "0.1.1",
     "raven-js": "3.26.4",
     "react": "16.4.2",
     "react-dom": "16.4.2",
