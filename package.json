@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -81,7 +81,7 @@
     "codecov": "3.0.4",
     "cross-env": "5.2.0",
     "danger": "3.8.6",
-    "enzyme": "3.4.2",
+    "enzyme": "3.4.3",
     "enzyme-adapter-react-16": "1.2.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "3.0.1",
