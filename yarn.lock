@@ -6295,9 +6295,9 @@ jest-environment-node@^22.4.1:
     jest-mock "^22.4.3"
     jest-util "^22.4.3"
 
-jest-environment-puppeteer@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/jest-environment-puppeteer/-/jest-environment-puppeteer-3.3.0.tgz#b878f712e35e5865920cbbe8ff85b4cf62441931"
+jest-environment-puppeteer@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jest-environment-puppeteer/-/jest-environment-puppeteer-3.3.1.tgz#9b0a0875346c527ce4d4babaec5254043855baf3"
   dependencies:
     chalk "^2.4.1"
     cwd "^0.10.0"
@@ -6374,12 +6374,12 @@ jest-mock@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-22.4.3.tgz#f63ba2f07a1511772cdc7979733397df770aabc7"
 
-jest-puppeteer@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/jest-puppeteer/-/jest-puppeteer-3.3.0.tgz#22d3d614e53d8c6dd5ecebc91cbc48b64e291cb1"
+jest-puppeteer@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jest-puppeteer/-/jest-puppeteer-3.3.1.tgz#c400fd6ae055287af7843c9c07871b4059a6ed69"
   dependencies:
     expect-puppeteer "^3.3.0"
-    jest-environment-puppeteer "^3.3.0"
+    jest-environment-puppeteer "^3.3.1"
 
 jest-regex-util@^22.1.0, jest-regex-util@^22.4.3:
   version "22.4.3"
