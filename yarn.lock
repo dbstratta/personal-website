@@ -292,9 +292,9 @@
   version "7.0.0-beta.53"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.53.tgz#d64458636ffc258b42714a9dd93aeb6f8b8cf3ed"
 
-"@babel/helper-plugin-utils@^7.0.0-rc.4":
-  version "7.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-rc.4.tgz#75fc55485d62174787cb5edc8fad1fc375b7c48f"
+"@babel/helper-plugin-utils@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz#bbb3fbee98661c569034237cc03967ba99b4f250"
 
 "@babel/helper-regex@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -580,11 +580,11 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.53"
 
-"@babel/plugin-syntax-typescript@^7.0.0-rc.4":
-  version "7.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.0.0-rc.4.tgz#763f0c3ba6d978f3437e6a7bd560671706cde3ac"
+"@babel/plugin-syntax-typescript@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.0.0.tgz#90f4fe0a741ae9c0dcdc3017717c05a0cbbd5158"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0-rc.4"
+    "@babel/helper-plugin-utils" "^7.0.0"
 
 "@babel/plugin-transform-arrow-functions@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -1030,12 +1030,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.53"
 
-"@babel/plugin-transform-typescript@^7.0.0-rc.4":
-  version "7.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.0.0-rc.4.tgz#41fd4ca88a6c7abddccd950412ecf1d5aa186ffa"
+"@babel/plugin-transform-typescript@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.0.0.tgz#71bf13cae08117ae5dc1caec5b90938d8091a01e"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0-rc.4"
-    "@babel/plugin-syntax-typescript" "^7.0.0-rc.4"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-typescript" "^7.0.0"
 
 "@babel/plugin-transform-unicode-regex@7.0.0-beta.42":
   version "7.0.0-beta.42"
@@ -1170,12 +1170,12 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.53"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.53"
 
-"@babel/preset-typescript@7.0.0-rc.4":
-  version "7.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.0.0-rc.4.tgz#28e5c8a83b9e434c0eda3958cc88a0a9bd11ba6d"
+"@babel/preset-typescript@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.0.0.tgz#1e65c8b863ff5b290f070d999c810bb48a8e3904"
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0-rc.4"
-    "@babel/plugin-transform-typescript" "^7.0.0-rc.4"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-transform-typescript" "^7.0.0"
 
 "@babel/runtime@7.0.0-beta.42":
   version "7.0.0-beta.42"
