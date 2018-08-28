@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.89",
+  "version": "1.0.90",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -77,7 +77,7 @@
     "@types/react-dom": "16.0.7",
     "@types/react-helmet": "5.0.7",
     "@types/react-router-dom": "4.3.0",
-    "babel-eslint": "8.2.6",
+    "babel-eslint": "9.0.0",
     "codecov": "3.0.4",
     "cross-env": "5.2.0",
     "danger": "3.8.6",
