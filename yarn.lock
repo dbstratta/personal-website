@@ -8998,9 +8998,9 @@ react-app-rewire-styled-components@3.0.2:
     babel-plugin-styled-components "^1.1.4"
     react-app-rewired "^1.2.0"
 
-react-app-rewire-typescript-babel-preset@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-app-rewire-typescript-babel-preset/-/react-app-rewire-typescript-babel-preset-2.3.0.tgz#48d8e4d457ce349fe554325a9fbef990461ad81a"
+react-app-rewire-typescript-babel-preset@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-app-rewire-typescript-babel-preset/-/react-app-rewire-typescript-babel-preset-2.4.0.tgz#d0c2430f33fafe042c0547b25ef1118e0ef8d691"
   dependencies:
     tslint-loader "^3.6.0"
 
