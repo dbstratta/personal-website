@@ -1473,11 +1473,11 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.3"
 
-"@fortawesome/free-solid-svg-icons@5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.3.0.tgz#6aab98a8b5451489236e62654fe1d19b74b90fc6"
+"@fortawesome/free-solid-svg-icons@5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.3.1.tgz#9660bece3c4850d58f1653e26c1693487ff74b08"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.3"
+    "@fortawesome/fontawesome-common-types" "^0.2.4"
 
 "@fortawesome/react-fontawesome@0.1.2":
   version "0.1.2"
