@@ -25,7 +25,7 @@ export class InstallPrompt extends React.Component {
     if (outcome === 'accepted') {
       InstallPrompt.sendPromptAcceptedAnalyticsEvent();
     } else {
-      InstallPrompt.sendPromptDeclinedAnalyticsEvent();
+      InstallPrompt.sendPromptDismissedAnalyticsEvent();
     }
   }
 
@@ -38,13 +38,13 @@ export class InstallPrompt extends React.Component {
     sendAnalyticsEvent(promptAcceptedAnalyticsEvent);
   }
 
-  private static sendPromptDeclinedAnalyticsEvent(): void {
-    const promptDeclinedAnalyticsEvent: AnalyticsEvent = {
+  private static sendPromptDismissedAnalyticsEvent(): void {
+    const promptDismissedAnalyticsEvent: AnalyticsEvent = {
       category: 'Install',
-      action: 'prompt declined',
+      action: 'prompt dismissed',
     };
 
-    sendAnalyticsEvent(promptDeclinedAnalyticsEvent);
+    sendAnalyticsEvent(promptDismissedAnalyticsEvent);
   }
 
   private static addAppInstalledEventListener(): void {

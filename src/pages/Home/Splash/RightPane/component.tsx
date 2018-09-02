@@ -33,6 +33,11 @@ const Wrapper = styled.div`
 
 const SeparatorAndSocialWrapper = styled.div`
   max-width: 44rem;
+  margin: auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    margin: 0;
+  }
 `;
 
 const StyledSocial = styled(Social)`

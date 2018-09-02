@@ -32,12 +32,14 @@ const StyledButton = styled.button`
   color: var(--secondary-font-color);
   animation: ${fadeLeftInKeyframe} 1s;
 
+  cursor: pointer;
+
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
     display: none;
   }
 `;
 
-export const NavLinks = ({ onMenuClick }: NavLinksProps) => (
+export const NavLinks: React.SFC<NavLinksProps> = ({ onMenuClick }) => (
   <Wrapper>
     <BarLinks />
     <StyledButton onClick={onMenuClick} aria-label="Toggle navigation menu">
