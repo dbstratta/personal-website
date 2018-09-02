@@ -14,8 +14,8 @@
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development webpack-serve --config webpack.dev.js",
     "start:prod": "node dist/index.js",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
-    "prebuild": "yarn typecheck:ts",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "prebuild:prod": "yarn typecheck:ts",
     "test": "yarn test:unit && yarn test:e2e",
     "test:unit": "cross-env NODE_ENV=test jest",
     "test:unit:watch": "yarn test:unit --onlyChanged --watch",

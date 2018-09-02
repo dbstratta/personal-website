@@ -15,7 +15,7 @@ export class InstallPrompt extends React.Component {
     window.addEventListener('beforeinstallprompt', async (event: any) => {
       event.prompt();
 
-      const choice = await event.userChoice();
+      const choice = await event.userChoice;
 
       InstallPrompt.sendPromptChoiceOutcomeAnalyticsEvent(choice.outcome);
     });

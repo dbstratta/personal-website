@@ -4,7 +4,7 @@ base = ""
 # Build output directory.
 publish = "dist"
 # Command to build the files.
-command = "yarn build"
+command = "yarn build:prod"
 
 [[redirects]]
   from = "/*"
