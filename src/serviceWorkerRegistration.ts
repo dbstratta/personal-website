@@ -36,10 +36,7 @@ export function register(config?: Config): void {
     return;
   }
 
-  const publicUrl = new URL(
-    process.env.PUBLIC_URL!,
-    window.location.toString(),
-  );
+  const publicUrl = new URL(window.location.toString());
 
   if (publicUrl.origin !== window.location.origin) {
     // Our service worker won't work if PUBLIC_URL is on a different origin
@@ -51,7 +48,7 @@ export function register(config?: Config): void {
   window.addEventListener(
     'load',
     async (): Promise<void> => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = '/service-worker.js';
 
       if (isLocalhost) {
         // This is running on localhost.
