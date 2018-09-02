@@ -6,9 +6,6 @@ WORKDIR /usr/src/app
 
 COPY package.json yarn.lock ./
 
-# We need `react-app-rewired` to build the app
-# and it's listed in `devDependencies`. That's why
-# we pass `--production=false`.
 RUN yarn install --production=false
 
 COPY . .

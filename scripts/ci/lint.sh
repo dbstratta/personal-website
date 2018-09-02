@@ -12,6 +12,7 @@ readonly __base="$(basename "${__file}")"
 readonly __root="$(cd "$(dirname "$(dirname "${__dir}")")" && pwd)"
 
 main() {
+    yarn typecheck:ts
     yarn lint:ci
 }
 

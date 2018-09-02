@@ -8,11 +8,11 @@ export const ContactContent: React.SFC = () => (
   <section>
     <StyledPageHeading>Contact</StyledPageHeading>
     <ParagraphsWrapper>
-      <StyledParagraph>I'd love to hear from you!</StyledParagraph>
+      <StyledParagraph>I&apos;d love to hear from you!</StyledParagraph>
       <StyledParagraph>
-        From "hi!" to job opportunities, everything is welcome!
+        From &quot;hi!&quot; to job opportunities, everything is welcome!
         <br />
-        I'll try to get back to you as soon as I can.
+        I&apos;ll try to get back to you as soon as I can.
       </StyledParagraph>
       <StyledEmailParagraph>
         <Mailto email="strattadb@gmail.com">strattadb@gmail.com</Mailto>

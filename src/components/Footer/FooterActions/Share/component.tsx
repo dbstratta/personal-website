@@ -34,7 +34,7 @@ export class Share extends PureComponent {
       });
 
       this.sendShareSuccessAnalyticsEvent();
-    } catch (e) {
+    } catch (error) {
       this.sendShareFailureAnalyticsEvent();
     }
   };

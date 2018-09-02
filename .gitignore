@@ -5,10 +5,11 @@ node_modules
 coverage
 
 # Production
-build
+dist
 
 # Misc
 .env
+/keys
 *.pyc
 .DS_Store
 .idea

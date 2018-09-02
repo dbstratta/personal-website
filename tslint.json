@@ -16,7 +16,8 @@
     "member-ordering": false,
     "object-literal-sort-keys": false,
     "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
-    "interface-over-type-literal": false
+    "interface-over-type-literal": false,
+    "no-unused-expression": false
   },
   "rulesDirectory": [],
   "linterOptions": {

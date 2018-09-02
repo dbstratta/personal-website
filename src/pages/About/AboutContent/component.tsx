@@ -4,27 +4,29 @@ import styled from 'styled-components';
 import OutboundLink from '../../../components/OutboundLink';
 import PageHeading from '../../../components/PageHeading';
 
+const loopGitHubLink = 'https://github.com/strattadb/loop';
+
 export const AboutContent: React.SFC = () => (
   <section>
     <StyledPageHeading>About</StyledPageHeading>
     <ParagraphsWrapper>
       <StyledParagraph>
-        Hi! I'm Diego. I'm a web developer, open source enthusiast and computer
-        engineering student living in Montevideo, Uruguay.
+        Hi! I&apos;m Diego. I&apos;m a web developer, open source enthusiast and
+        computer engineering student living in Montevideo, Uruguay.
       </StyledParagraph>
       <StyledParagraph>
         <strong>I love building things for the web!</strong> When I discovered
         web development back in 2016, it became my passion.
         <br />
-        Since then, I've developed many awesome projects, including my most
+        Since then, I&apos;ve developed many awesome projects, including my most
         ambitious so far,{' '}
         <OutboundLink
-          to="https://github.com/strattadb/margaret"
+          to={loopGitHubLink}
           target="_blank"
           rel="noopener noreferrer"
-          eventLabel="Margaret GitHub page"
+          eventLabel="Loop GitHub page"
         >
-          Margaret
+          Loop, a modern team communication app
         </OutboundLink>
         .
       </StyledParagraph>
@@ -33,8 +35,9 @@ export const AboutContent: React.SFC = () => (
         successful products.
       </StyledParagraph>
       <StyledParagraph>
-        When I'm not developing things, I'm probably riding my bicycle,
-        binge-watching something on Netflix or practicing my dancing skills!
+        When I&apos;m not developing things, I&apos;m probably riding my
+        bicycle, binge-watching something on Netflix or practicing my dancing
+        skills!
       </StyledParagraph>
     </ParagraphsWrapper>
   </section>

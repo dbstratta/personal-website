@@ -5,7 +5,7 @@ import Link from '../../../../../components/Link';
 
 export const ShortAbout: React.SFC = () => (
   <Wrapper>
-    Hi! I'm a full-stack web developer from Montevideo, Uruguay.{' '}
+    Hi! I&apos;m a full-stack web developer from Montevideo, Uruguay.{' '}
     <ReadMoreWrapper>
       <Link to="/about">Read more</Link>.
     </ReadMoreWrapper>

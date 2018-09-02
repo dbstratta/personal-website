@@ -1,4 +1,5 @@
 /* tslint:disable:no-console */
+/* eslint-disable no-console */
 
 /**
  * In production, we register a service worker to serve assets from local cache.
@@ -25,6 +26,7 @@ const isLocalhost = !!(
   window.location.hostname === '[::1]' ||
   // 127.0.0.1/8 is considered localhost for IPv4.
   window.location.hostname.match(
+    // eslint-disable-next-line unicorn/regex-shorthand
     /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
   )
 );
@@ -98,6 +100,7 @@ async function registerValidSW(swUrl: string, config?: Config): Promise<void> {
             // It's the perfect time to display a
             // "Content is cached for offline use." message.
 
+            // eslint-disable-next-line no-lonely-if
             if (config && config.onSuccess) {
               config.onSuccess(registration);
             }
@@ -125,7 +128,7 @@ async function checkValidServiceWorker(
       // Service worker found. Proceed as normal.
       registerValidSW(swUrl, config);
     }
-  } catch (e) {
+  } catch (error) {
     // No internet connection found. App is running in offline mode.
   }
 }
