@@ -11,8 +11,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/?utm_source=pwa",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#007fff",
   "background_color": "#fffefa"
 }
