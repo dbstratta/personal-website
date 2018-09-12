@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.32",
+  "version": "2.0.33",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -79,7 +79,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.2",
     "babel-plugin-dynamic-import-node": "2.1.0",
-    "babel-plugin-styled-components": "1.7.0",
+    "babel-plugin-styled-components": "1.7.1",
     "clean-webpack-plugin": "0.1.19",
     "codecov": "3.1.0",
     "connect-history-api-fallback": "1.5.0",
