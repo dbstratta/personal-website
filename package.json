@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.45",
+  "version": "2.0.46",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -54,13 +54,13 @@
     "styled-components": "3.4.6"
   },
   "devDependencies": {
-    "@babel/core": "7.0.1",
-    "@babel/plugin-proposal-class-properties": "7.0.0",
+    "@babel/core": "7.1.0",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
     "@babel/plugin-proposal-optional-catch-binding": "7.0.0",
     "@babel/plugin-syntax-dynamic-import": "7.0.0",
-    "@babel/preset-env": "7.0.0",
+    "@babel/preset-env": "7.1.0",
     "@babel/preset-react": "7.0.0",
-    "@babel/preset-typescript": "7.0.0",
+    "@babel/preset-typescript": "7.1.0",
     "@commitlint/cli": "7.1.2",
     "@commitlint/config-conventional": "7.1.2",
     "@commitlint/prompt-cli": "7.1.2",
