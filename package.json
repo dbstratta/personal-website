@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.52",
+  "version": "2.0.53",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -126,6 +126,6 @@
     "webpack-cli": "3.1.0",
     "webpack-merge": "4.1.4",
     "webpack-serve": "2.0.2",
-    "workbox-webpack-plugin": "3.5.0"
+    "workbox-webpack-plugin": "3.6.1"
   }
 }
