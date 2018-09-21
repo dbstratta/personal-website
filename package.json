@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.59",
+  "version": "2.0.60",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -102,7 +102,7 @@
     "html-webpack-plugin": "3.2.0",
     "husky": "1.0.0-rc.14",
     "jest": "23.6.0",
-    "jest-enzyme": "6.1.1",
+    "jest-enzyme": "6.1.2",
     "jest-puppeteer": "3.3.1",
     "jest-styled-components": "6.2.0",
     "koa-connect": "2.0.1",
