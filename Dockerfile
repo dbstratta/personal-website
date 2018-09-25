@@ -6,6 +6,6 @@ RUN yarn install --production=false
 COPY . .
 RUN yarn build:prod
 
-FROM nginx:1.15.3-alpine
+FROM nginx:1.15.4-alpine
 COPY --from=builder /usr/src/app/dist/ /usr/share/nginx/html/
 COPY nginx/nginx.conf /etc/nginx/sites-available/portfolio.conf
