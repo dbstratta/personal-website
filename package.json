@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.66",
+  "version": "2.0.67",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -122,7 +122,7 @@
     "tslint-config-prettier": "1.15.0",
     "typescript": "3.0.3",
     "typescript-eslint-parser": "18.0.0",
-    "webpack": "4.19.1",
+    "webpack": "4.20.0",
     "webpack-cli": "3.1.1",
     "webpack-merge": "4.1.4",
     "webpack-serve": "2.0.2",
