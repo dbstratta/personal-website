@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.70",
+  "version": "2.0.71",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -94,7 +94,7 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jest": "21.22.1",
     "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-prettier": "2.7.0",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-typescript": "0.12.0",
     "eslint-plugin-unicorn": "6.0.1",
