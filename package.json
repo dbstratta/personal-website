@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.69",
+  "version": "2.0.70",
   "main": "dist/index.js",
   "repository": "git@github.com:strattadb/portfolio.git",
   "license": "MIT",
@@ -100,7 +100,7 @@
     "eslint-plugin-unicorn": "6.0.1",
     "friendly-errors-webpack-plugin": "1.7.0",
     "html-webpack-plugin": "3.2.0",
-    "husky": "1.0.0-rc.15",
+    "husky": "1.0.0",
     "jest": "23.6.0",
     "jest-enzyme": "6.1.2",
     "jest-puppeteer": "3.4.0",
