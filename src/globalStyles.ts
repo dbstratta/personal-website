@@ -56,6 +56,7 @@ injectGlobal`
     --xxl-font-size: 5rem;
 
     --base-space: 0.2rem;
+    --xxs-space: calc(var(--base-space) * 2);
     --xs-space: calc(var(--base-space) * 3);
     --sm-space: calc(var(--base-space) * 5);
     --md-space: calc(var(--base-space) * 8);
@@ -67,6 +68,7 @@ injectGlobal`
     --lg-transition: 0.3s;
 
     --main-content-width: 90%;
+    --main-content-max-width: 80rem;
 
     --nav-bar-height: 2rem;
 

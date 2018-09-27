@@ -1,13 +1,15 @@
 import ReactGA from 'react-ga';
 
+import { env } from '../config';
 import { isProductionEnvironment } from '../helpers';
 import { Event } from './events';
 
+const googleAnalyticsTrackingCode = 'UA-85159007-1';
+
 export const initializeAnalytics = (): void => {
-  const googleAnalyticsTrackingCode = 'UA-85159007-1';
   const reactGAInitializeOptions: ReactGA.InitializeOptions = {
     debug: !isProductionEnvironment,
-    testMode: !isProductionEnvironment,
+    testMode: !isProductionEnvironment || !env.enableAnalytics,
   };
 
   ReactGA.initialize(googleAnalyticsTrackingCode, reactGAInitializeOptions);

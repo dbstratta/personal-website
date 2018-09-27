@@ -4,8 +4,6 @@ const fs = require('fs');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const convert = require('koa-connect');
-const history = require('connect-history-api-fallback');
 
 const webpackCommonConfig = require('./webpack.common');
 
@@ -85,31 +83,25 @@ const webpackDevConfig = merge(webpackCommonConfig, {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
 
-  serve: {
+  devServer: {
     open: true,
     host: '0.0.0.0',
     port: 4000,
-    content: path.resolve(__dirname, 'public'),
+    hot: true,
+    contentBase: path.resolve(__dirname, 'public'),
+    publicPath: '/',
+    inline: true,
     https: {
       key: fs.readFileSync(keyPath),
       cert: fs.readFileSync(certPath),
     },
-    devMiddleware: {
-      publicPath: '/',
-      logLevel: 'silent',
+    overlay: {
+      errors: true,
+      warnings: false,
     },
-    hotClient: {
-      logLevel: 'silent',
-      port: 4001,
-      host: {
-        server: '0.0.0.0',
-        client: 'localhost',
-      },
-      https: true,
-    },
-    add(app) {
-      app.use(convert(history()));
-    },
+    quiet: true,
+    clientLogLevel: 'error',
+    historyApiFallback: true,
   },
 });
 

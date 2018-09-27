@@ -4,6 +4,36 @@ import styled from 'styled-components';
 import Mailto from '../../../components/Mailto';
 import PageHeading from '../../../components/PageHeading';
 
+const StyledPageHeading = styled(PageHeading)`
+  width: 100%;
+  max-width: 50rem;
+
+  animation: var(--fade-up-in-keyframe) 1s;
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    width: 60%;
+  }
+`;
+
+const ParagraphsWrapper = styled.div`
+  width: 100%;
+  max-width: 50rem;
+
+  margin: 0 auto;
+
+  font-size: var(--lg-font-size);
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    width: 60%;
+  }
+`;
+
+const StyledParagraph = styled.p``;
+
+const StyledEmailParagraph = styled.p`
+  font-size: 1.1em;
+`;
+
 export const ContactContent: React.SFC = () => (
   <section>
     <StyledPageHeading>Contact</StyledPageHeading>
@@ -20,26 +50,5 @@ export const ContactContent: React.SFC = () => (
     </ParagraphsWrapper>
   </section>
 );
-
-const StyledPageHeading = styled(PageHeading)`
-  animation: var(--fade-up-in-keyframe) 1s;
-`;
-
-const ParagraphsWrapper = styled.div`
-  width: 100%;
-  max-width: 50rem;
-
-  font-size: var(--lg-font-size);
-
-  @media (min-width: ${props => props.theme.breakpoints.lg}) {
-    width: 60%;
-  }
-`;
-
-const StyledParagraph = styled.p``;
-
-const StyledEmailParagraph = styled.p`
-  font-size: 1.1em;
-`;
 
 export default ContactContent;

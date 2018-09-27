@@ -6,7 +6,12 @@
   # Command to build the files.
   command = "yarn build:prod"
 
+  environment = { ENABLE_ANALYTICS = "true", ENABLE_ERROR_TRACKING = "true" }
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[context.develop]
+  environment = { ENABLE_ANALYTICS = "false", ENABLE_ERROR_TRACKING = "false" }

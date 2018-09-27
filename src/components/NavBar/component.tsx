@@ -10,6 +10,7 @@ const StyledNav = styled.nav`
   flex-shrink: 0;
 
   width: var(--main-content-width);
+  max-width: var(--main-content-max-width);
   margin: auto;
 `;
 

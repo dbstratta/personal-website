@@ -5,31 +5,26 @@ import Share from './Share';
 import SourceCodeLink from './SourceCodeLink';
 
 const Wrapper = styled.div`
-  --children-display: block;
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: 0 auto var(--xxs-space);
+`;
+
+const ActionWrapper = styled.div`
+  flex: 1 1 100%;
 
   margin: 0 auto var(--xs-space);
-
-  > *:not(:last-child) {
-    margin: 0 auto var(--xs-space);
-  }
-
-  > * {
-    display: var(--children-display);
-  }
-
-  @media (min-width: ${props => props.theme.breakpoints.lg}) {
-    --children-display: inline;
-
-    > *:not(:last-child) {
-      margin: 0 var(--md-space) 0 0;
-    }
-  }
 `;
 
 export const FooterActions: React.SFC = () => (
   <Wrapper>
-    <Share />
-    <SourceCodeLink />
+    <ActionWrapper>
+      <Share />
+    </ActionWrapper>
+    <ActionWrapper>
+      <SourceCodeLink />
+    </ActionWrapper>
   </Wrapper>
 );
 

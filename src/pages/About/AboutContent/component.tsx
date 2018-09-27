@@ -6,6 +6,32 @@ import PageHeading from '../../../components/PageHeading';
 
 const loopGitHubLink = 'https://github.com/strattadb/loop';
 
+const StyledPageHeading = styled(PageHeading)`
+  width: 100%;
+  max-width: 50rem;
+
+  animation: var(--fade-up-in-keyframe) 1s;
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    width: 60%;
+  }
+`;
+
+const ParagraphsWrapper = styled.div`
+  width: 100%;
+  max-width: 50rem;
+
+  margin: 0 auto;
+
+  font-size: var(--lg-font-size);
+
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+    width: 60%;
+  }
+`;
+
+const StyledParagraph = styled.p``;
+
 export const AboutContent: React.SFC = () => (
   <section>
     <StyledPageHeading>About</StyledPageHeading>
@@ -42,22 +68,5 @@ export const AboutContent: React.SFC = () => (
     </ParagraphsWrapper>
   </section>
 );
-
-const StyledPageHeading = styled(PageHeading)`
-  animation: var(--fade-up-in-keyframe) 1s;
-`;
-
-const ParagraphsWrapper = styled.div`
-  width: 100%;
-  max-width: 50rem;
-
-  font-size: var(--lg-font-size);
-
-  @media (min-width: ${props => props.theme.breakpoints.lg}) {
-    width: 60%;
-  }
-`;
-
-const StyledParagraph = styled.p``;
 
 export default AboutContent;
