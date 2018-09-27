@@ -6,8 +6,11 @@ describe('index page', () => {
   test('contains my name', async () => {
     const text = await page.$eval('#root', root => root.textContent);
 
-    expect(text).toContain('Diego');
-    expect(text).toContain('Stratta');
+    const firstName = 'Diego';
+    const lastName = 'Stratta';
+
+    expect(text).toContain(firstName);
+    expect(text).toContain(lastName);
   });
 
   test('contains a non-empty <noscript /> tag', async () => {
