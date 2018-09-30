@@ -1,8 +1,8 @@
 const args = process.env.CI ? ['--no-sandbox'] : [];
 
 const server = {
-  command: 'node e2e/ciServer.js',
-  port: 3000,
+  command: 'node e2e/e2eServer.js',
+  port: process.env.E2E_SERVER_PORT || 3000,
 };
 
 module.exports = {
@@ -11,4 +11,5 @@ module.exports = {
     headless: process.env.PUPPETEER_HEADLESS,
     args,
   },
+  server,
 };

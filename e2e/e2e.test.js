@@ -1,6 +1,8 @@
 describe('index page', () => {
   beforeAll(async () => {
-    await page.goto('https://localhost:3000');
+    const port = process.env.E2E_SERVER_PORT || 3000;
+
+    await page.goto(`https://localhost:${port}`);
   });
 
   test('contains my name', async () => {

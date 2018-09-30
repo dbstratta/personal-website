@@ -12,7 +12,7 @@ readonly __base="$(basename "${__file}")"
 readonly __root="$(cd "$(dirname "$(dirname "${__dir}")")" && pwd)"
 
 main() {
-    yarn test:ci:unit
+    yarn test:ci
     yarn coverage
 }
 
