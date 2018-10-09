@@ -7,9 +7,9 @@ import { Event, sendAnalyticsEvent } from '../../../../analytics';
 import { footerLinkStyle } from '../FooterLink';
 
 type NavigatorShareFnArgs = {
-  url: USVString;
-  text: USVString;
-  title: USVString;
+  url: string;
+  text: string;
+  title: string;
 };
 
 type NavigatorShareFn = (data: NavigatorShareFnArgs) => Promise<void>;
