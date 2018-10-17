@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Theme } from '../../theme';
 import PageView from '../PageView';
+import GlobalStyle from './GlobalStyle';
 import InstallPrompt from './InstallPrompt';
 import Routes from './Routes';
 
@@ -18,6 +19,7 @@ export const App: React.SFC<AppProps> = ({ theme }) => (
   <Router>
     <ThemeProvider theme={theme}>
       <ErrorBoundary>
+        <GlobalStyle />
         <ScrollToTop />
         <PageView />
         <Routes />

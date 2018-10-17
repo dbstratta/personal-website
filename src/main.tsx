@@ -5,8 +5,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './globalStyles';
-
 import { initializeAnalytics } from './analytics';
 import Root from './components/Root';
 import { initializeErrorTracking } from './errorTracking';

@@ -1,6 +1,4 @@
-import { injectGlobal, keyframes } from 'styled-components';
-
-import theme from './theme';
+import { createGlobalStyle, keyframes } from 'styled-components';
 
 const fadeUpInKeyframe = keyframes`
   from {
@@ -28,15 +26,14 @@ const waitAndFadeInKeyframe = keyframes`
   }
 `;
 
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   :root {
     --sans-serif-font-family: sans-serif;
     --serif-font-family: 'EB Garamond', serif;
     --display-font-family: var(--serif-font-family);
     --handwriting-font-family: 'La Belle Aurore', sans-serif;
 
-    --primary-color-hue: ${theme.colors.primaryColorHue};
+    --primary-color-hue: ${(props: any) => props.theme.colors.primaryColorHue};
     --primary-color: hsla(var(--primary-color-hue), 100%, 50%, 1);
 
     --primary-font-color: hsla(0, 0%, 10%, 1);
@@ -75,7 +72,7 @@ injectGlobal`
     --fade-up-in-keyframe: ${fadeUpInKeyframe};
     --wait-and-fade-in-keyframe: ${waitAndFadeInKeyframe};
 
-  @media (min-width: ${theme.breakpoints.lg}) {
+  @media (min-width: ${props => props.theme.breakpoints.lg}) {
     --main-content-width: 80%;
 
     --nav-bar-height: 2.5rem;
@@ -123,3 +120,5 @@ injectGlobal`
     margin: 0;
   }
 `;
+
+export default GlobalStyle;
