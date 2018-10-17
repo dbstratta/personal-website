@@ -81,7 +81,7 @@
     "clean-webpack-plugin": "0.1.19",
     "codecov": "3.1.0",
     "connect-history-api-fallback": "1.5.0",
-    "copy-webpack-plugin": "4.5.2",
+    "copy-webpack-plugin": "4.5.3",
     "cross-env": "5.2.0",
     "danger": "4.3.8",
     "enzyme": "3.6.0",
