@@ -84,7 +84,7 @@
     "connect-history-api-fallback": "1.5.0",
     "copy-webpack-plugin": "4.5.3",
     "cross-env": "5.2.0",
-    "danger": "4.4.8",
+    "danger": "6.0.2",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
     "eslint": "5.7.0",
