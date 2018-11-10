@@ -42,7 +42,7 @@
     "@fortawesome/free-brands-svg-icons": "5.4.1",
     "@fortawesome/free-solid-svg-icons": "5.4.1",
     "@fortawesome/react-fontawesome": "0.1.3",
-    "@strattadb/environment": "4.1.0",
+    "@strattadb/environment": "5.1.0",
     "raven-js": "3.27.0",
     "react": "16.6.1",
     "react-dom": "16.6.1",

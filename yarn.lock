@@ -1100,10 +1100,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@strattadb/environment@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@strattadb/environment/-/environment-4.1.0.tgz#5eaf0a4f91fca3598e7be93f11b2d0b953bd7779"
-  integrity sha512-f7vxIcX4UCiGx6Bb9KSdfdRcJcLvmmPfS4uxgJBhuGYWeK5GiCtFsznh459qee+AIogMYOlOWOqoEu3xmD+8VA==
+"@strattadb/environment@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@strattadb/environment/-/environment-5.1.0.tgz#7c431e5794e09af11863cfaffd98fb40e03574be"
+  integrity sha512-xTOlxjCxThg3OLTYRzv8Cq233caNnxwpjA/9LVK6Klt3wG2MLh+lCWs5ucYiTaIRVqSQ7Z0oll2zpdaevo1qnA==
   dependencies:
     validator "^10.7.1"
 
