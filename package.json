@@ -39,9 +39,9 @@
     "commit": "commit"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.6",
-    "@fortawesome/free-brands-svg-icons": "5.4.1",
-    "@fortawesome/free-solid-svg-icons": "5.4.1",
+    "@fortawesome/fontawesome-svg-core": "1.2.8",
+    "@fortawesome/free-brands-svg-icons": "5.5.0",
+    "@fortawesome/free-solid-svg-icons": "5.5.0",
     "@fortawesome/react-fontawesome": "0.1.3",
     "raven-js": "3.27.0",
     "react": "16.5.2",
