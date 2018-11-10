@@ -1,5 +1,6 @@
 const path = require('path');
 
+const { DefinePlugin } = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -100,6 +101,13 @@ const webpackProdConfig = merge(webpackCommonConfig, {
           handler: 'cacheFirst',
         },
       ],
+    }),
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.ENABLE_ANALYTICS': process.env.ENABLE_ANALYTICS === 'true',
+      'process.env.ENABLE_ERROR_TRACKING':
+        process.env.ENABLE_ERROR_TRACKING === 'true',
+      'process.env.SENTRY_DSN': JSON.stringify(process.env.SENTRY_DSN),
     }),
   ],
 

@@ -13,6 +13,6 @@
   ],
   "start_url": "/?utm_source=pwa",
   "display": "standalone",
-  "theme_color": "#007fff",
+  "theme_color": "#fffefa",
   "background_color": "#fffefa"
 }

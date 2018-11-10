@@ -13,8 +13,6 @@
  * This link also includes instructions on opting out of this behavior.
  */
 
-import { isProductionEnvironment } from './helpers';
-
 export type Config = {
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
@@ -32,7 +30,10 @@ const isLocalhost = !!(
 );
 
 export function register(config?: Config): void {
-  if (!isProductionEnvironment || !('serviceWorker' in navigator)) {
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    !('serviceWorker' in navigator)
+  ) {
     return;
   }
 
@@ -125,7 +126,7 @@ async function checkValidServiceWorker(
       // Service worker found. Proceed as normal.
       registerValidSW(swUrl, config);
     }
-  } catch (error) {
+  } catch {
     // No internet connection found. App is running in offline mode.
   }
 }

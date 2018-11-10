@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
+const { DefinePlugin } = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
@@ -71,6 +72,12 @@ const webpackDevConfig = merge(webpackCommonConfig, {
       template: 'public/index.html',
     }),
     new FriendlyErrorsWebpackPlugin(),
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development'),
+      'process.env.ENABLE_ANALYTICS': false,
+      'process.env.ENABLE_ERROR_TRACKING': false,
+      'process.env.SENTRY_DSN': JSON.stringify(''),
+    }),
   ],
 
   optimization: {
