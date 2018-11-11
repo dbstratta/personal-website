@@ -93,7 +93,7 @@ const webpackDevConfig = merge(webpackCommonConfig, {
   devServer: {
     open: true,
     host: '0.0.0.0',
-    port: 4000,
+    port: process.env.PORT || 4000,
     hot: true,
     contentBase: path.resolve(__dirname, 'public'),
     publicPath: '/',

@@ -1,14 +1,28 @@
 module.exports = {
   root: true,
+
+  parser: 'babel-eslint',
+
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
 
-  plugins: ['unicorn', 'jest', 'typescript', 'prettier'],
+  plugins: [
+    'promise',
+    'unicorn',
+    'react',
+    'import',
+    'jsx-a11y',
+    'jest',
+    'typescript',
+    'fp',
+    'eslint-comments',
+    'prettier',
+  ],
 
   env: {
     es6: true,
@@ -23,9 +37,12 @@ module.exports = {
 
   extends: [
     'eslint:recommended',
+    'plugin:promise/recommended',
     'plugin:unicorn/recommended',
     'plugin:jest/recommended',
     'airbnb',
+    'plugin:eslint-comments/recommended',
+    'plugin:fp/recommended',
     'prettier',
     'prettier/react',
   ],
@@ -45,6 +62,15 @@ module.exports = {
     'import/prefer-default-export': 'off',
 
     'prettier/prettier': 'error',
+
+    'promise/valid-params': 'off',
+
+    'fp/no-mutation': 'off',
+    'fp/no-throw': 'off',
+    'fp/no-nil': 'off',
+    'fp/no-let': 'off',
+    'fp/no-unused-expression': 'off',
+    'fp/no-rest-parameters': 'off',
   },
 
   settings: {
@@ -59,6 +85,7 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       parser: 'typescript-eslint-parser',
+
       rules: {
         'no-undef': 'off',
         'no-unused-vars': 'off',
@@ -71,6 +98,11 @@ module.exports = {
         'react/destructuring-assignment': 'off',
 
         'import/export': 'off',
+
+        'typescript/no-unused-vars': 'error',
+        'typescript/class-name-casing': 'error',
+        'typescript/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
+        'typescript/no-non-null-assertion': 'error',
       },
     },
   ],
