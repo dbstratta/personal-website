@@ -1252,10 +1252,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
-"@types/react-dom@16.0.9":
-  version "16.0.9"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.9.tgz#73ceb7abe6703822eab6600e65c5c52efd07fb91"
-  integrity sha512-4Z0bW+75zeQgsEg7RaNuS1k9MKhci7oQqZXxrV5KUGIyXZHHAAL3KA4rjhdH8o6foZ5xsRMSqkoM5A3yRVPR5w==
+"@types/react-dom@16.0.10":
+  version "16.0.10"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.10.tgz#0c8980a639fa1d92a8547c8b6d0cf47af96c8966"
+  integrity sha512-CsUWfZBpj7SGBX/05bnvnsOUx+Uo6n7DoRVP7vYB5NWsanjHi60NWGZac8DstuXhdc7rasxI/j4D3hxgNSWlzg==
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -1300,14 +1300,13 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/styled-components@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.1.tgz#1a9f8ebff7ee5cbc9ddc08b486e55e5a152bb408"
-  integrity sha512-ye+XXSkaqs7BgCiQx4NQRIUnqo8LDrkRazE9qvBTG//rdAaHH77xshKE3OcWwVuLq283xH2wUW8C8z3eh1l+Wg==
+"@types/styled-components@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.0.3.tgz#8287e54e446302369eecc521243a2f32cf9122ee"
+  integrity sha512-LzntHlOKEOxUxMkVmQPNG88TsldeHO2NlwNkzHnw4wL8qhHQgd7u+u3yw84hZgoFh4ugsLCbFtjYcbP7v5WC5Q==
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
-    csstype "^2.2.0"
 
 "@types/tapable@*":
   version "1.0.4"
