@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.lg}) {
-    text-align: start;
+    text-align: initial;
   }
 `;
 
