@@ -7,13 +7,13 @@ import SourceCodeLink from './SourceCodeLink';
 
 const Wrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
 
   margin: 0 auto var(--xxs-space);
 `;
 
 const footerActionStyles = css`
-  flex: 1 1 100%;
+  flex: 0 0 auto;
 
   margin: 0 auto var(--xs-space);
 `;
