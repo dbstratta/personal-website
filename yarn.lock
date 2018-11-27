@@ -995,7 +995,7 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sentry/browser@^4.3.4":
+"@sentry/browser@4.3.4":
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.3.4.tgz#5c17184781c4fb6ad8ab48f5c48e01630d4fc3dc"
   integrity sha512-odRXxnhcSYzyR4YvTolNEyrz3fdDVw308l+9RBRJA9yOFVlezaz1mXH6Gv00F7cIj9yE/JtezDyhP339WsWy3w==

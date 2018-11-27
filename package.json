@@ -45,7 +45,7 @@
     "@fortawesome/free-brands-svg-icons": "5.5.0",
     "@fortawesome/free-solid-svg-icons": "5.5.0",
     "@fortawesome/react-fontawesome": "0.1.3",
-    "@sentry/browser": "^4.3.4",
+    "@sentry/browser": "4.3.4",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-ga": "2.5.5",
