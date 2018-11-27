@@ -1,0 +1,1 @@
+export { ClassNameProp } from './props';

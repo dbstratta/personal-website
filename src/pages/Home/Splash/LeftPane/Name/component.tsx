@@ -11,13 +11,13 @@ const StyledColorIncrement = styled(ColorIncrement)`
 
   transition: var(--md-transition);
 
-  @media (min-width: ${props => props.theme.breakpoints.lg}) {
+  @media (min-width: ${(props: any) => props.theme.breakpoints.lg}) {
     font-size: calc(var(--xxl-font-size) * 1.4);
   }
 `;
 
 export const Name: React.SFC = () => (
-  <StyledColorIncrement>
+  <StyledColorIncrement delay={1500}>
     <div>Diego</div>
     <div>Stratta</div>
   </StyledColorIncrement>

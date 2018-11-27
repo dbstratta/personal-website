@@ -4,7 +4,17 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { Event, sendAnalyticsEvent } from '../../../../analytics';
+import { ClassNameProp } from '../../../../types';
 import { footerLinkStyle } from '../FooterLink';
+
+const StyledButton = styled.button`
+  ${footerLinkStyle};
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  margin-right: var(--xs-space);
+  color: var(--quaternary-font-color);
+`;
 
 type NavigatorShareFnArgs = {
   url: string;
@@ -16,7 +26,9 @@ type NavigatorShareFn = (data: NavigatorShareFnArgs) => Promise<void>;
 
 type NavigatorShare = Navigator & { share: NavigatorShareFn };
 
-export class Share extends PureComponent {
+export type ShareButtonProps = ClassNameProp;
+
+export class ShareButton extends PureComponent<ShareButtonProps> {
   private readonly handleClick = (): Promise<void> => this.shareWebsite();
 
   private readonly shareWebsite = async (): Promise<void> => {
@@ -55,7 +67,11 @@ export class Share extends PureComponent {
     }
 
     return (
-      <StyledButton onClick={this.handleClick} aria-label="Share this website">
+      <StyledButton
+        onClick={this.handleClick}
+        className={this.props.className}
+        aria-label="Share this website"
+      >
         <StyledFontAwesomeIcon icon={faShareAlt} size="sm" />
         Share this website
       </StyledButton>
@@ -63,13 +79,4 @@ export class Share extends PureComponent {
   }
 }
 
-const StyledButton = styled.button`
-  ${footerLinkStyle};
-`;
-
-const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
-  margin-right: var(--xs-space);
-  color: var(--quaternary-font-color);
-`;
-
-export default Share;
+export default ShareButton;

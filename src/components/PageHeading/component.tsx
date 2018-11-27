@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export type PageHeadingProps = Readonly<{
   className?: string;
+  children?: React.ReactNode;
 }>;
 
 const StyledH1 = styled.h1`

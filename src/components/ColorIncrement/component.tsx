@@ -12,13 +12,11 @@ export type BaseColorIncrementProps = Readonly<{
 
 type WrapperCustomProps = Pick<BaseColorIncrementProps, 'colorHue'>;
 
-const Wrapper = styled.div.attrs<WrapperCustomProps>({
-  style: (
-    props: React.HTMLAttributes<HTMLDivElement> & WrapperCustomProps,
-  ) => ({
+const Wrapper = styled.div.attrs<WrapperCustomProps>(props => ({
+  style: {
     color: `hsla(${props.colorHue}, 100%, 50%, 1)`,
-  }),
-})`
+  },
+}))<WrapperCustomProps>`
   transition: var(--lg-transition);
 `;
 

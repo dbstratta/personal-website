@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { Theme } from '../../theme';
 import PageView from '../PageView';
 import GlobalStyle from './GlobalStyle';
-import InstallPrompt from './InstallPrompt';
 import Routes from './Routes';
 
 import ErrorBoundary from './ErrorBoundary';
@@ -23,7 +22,6 @@ export const App: React.SFC<AppProps> = ({ theme }) => (
         <ScrollToTop />
         <PageView />
         <Routes />
-        <InstallPrompt />
       </ErrorBoundary>
     </ThemeProvider>
   </Router>

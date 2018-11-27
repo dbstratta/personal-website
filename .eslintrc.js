@@ -103,6 +103,9 @@ module.exports = {
         'typescript/class-name-casing': 'error',
         'typescript/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
         'typescript/no-non-null-assertion': 'error',
+
+        'fp/no-class': 'off',
+        'fp/no-this': 'off',
       },
     },
   ],
