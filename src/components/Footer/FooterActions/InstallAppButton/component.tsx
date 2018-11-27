@@ -21,17 +21,23 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
 
 export type InstallAppButtonProps = ClassNameProp;
 
-export type InstallAppButtonState = Readonly<{ event: Event | null }>;
+export type InstallAppButtonState = Readonly<{
+  event: Event | null;
+  didInstall: boolean;
+}>;
 
 export class InstallAppButton extends React.PureComponent<
   InstallAppButtonProps,
   InstallAppButtonState
 > {
-  public readonly state: InstallAppButtonState = { event: null };
+  public readonly state: InstallAppButtonState = {
+    event: null,
+    didInstall: false,
+  };
 
   public componentDidMount() {
     this.addBeforeInstallPromptEventListener();
-    InstallAppButton.addAppInstalledEventListener();
+    this.addAppInstalledEventListener();
   }
 
   private addBeforeInstallPromptEventListener(): void {
@@ -80,8 +86,10 @@ export class InstallAppButton extends React.PureComponent<
     sendAnalyticsEvent(promptDismissedAnalyticsEvent);
   }
 
-  private static addAppInstalledEventListener(): void {
+  private addAppInstalledEventListener(): void {
     window.addEventListener('appinstalled', event => {
+      this.setState({ didInstall: true });
+
       InstallAppButton.sendAppInstalledAnalyticsEvent();
     });
   }
@@ -96,7 +104,7 @@ export class InstallAppButton extends React.PureComponent<
   }
 
   public render() {
-    if (!this.state.event) {
+    if (!this.state.event || this.state.didInstall) {
       return null;
     }
 
