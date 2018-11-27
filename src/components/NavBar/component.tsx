@@ -58,7 +58,7 @@ export type NavBarState = Readonly<{
 export class NavBar extends PureComponent<NavBarProps, NavBarState> {
   public state: NavBarState = { menuOpen: false };
 
-  private readonly handleMenuClick = (): void => {
+  private readonly handleMenuPointerDown = (): void => {
     this.toggleMenu();
 
     sendAnalyticsEvent({
@@ -78,7 +78,7 @@ export class NavBar extends PureComponent<NavBarProps, NavBarState> {
           <LogoWrapper>
             <Logo to="/">Diego Stratta</Logo>
           </LogoWrapper>
-          <NavLinks onMenuClick={this.handleMenuClick} />
+          <NavLinks onMenuPointerDown={this.handleMenuPointerDown} />
         </BarWrapper>
         <NavMenu open={this.state.menuOpen} />
       </StyledNav>

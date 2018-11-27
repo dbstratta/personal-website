@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 export type NavLinksProps = {
-  onMenuClick: React.MouseEventHandler;
+  onMenuPointerDown: React.PointerEventHandler;
 };
 
 const fadeLeftInKeyframe = keyframes`
@@ -39,10 +39,13 @@ const StyledButton = styled.button`
   }
 `;
 
-export const NavLinks: React.SFC<NavLinksProps> = ({ onMenuClick }) => (
+export const NavLinks: React.SFC<NavLinksProps> = ({ onMenuPointerDown }) => (
   <Wrapper>
     <BarLinks />
-    <StyledButton onClick={onMenuClick} aria-label="Toggle navigation menu">
+    <StyledButton
+      onPointerDown={onMenuPointerDown}
+      aria-label="Toggle navigation menu"
+    >
       <FontAwesomeIcon icon={faBars} />
     </StyledButton>
   </Wrapper>

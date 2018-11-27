@@ -17,6 +17,7 @@ const StyledColorIncrement = styled(ColorIncrement)`
 `;
 
 export const Name: React.SFC = () => (
+  // @ts-ignore
   <StyledColorIncrement delay={1500}>
     <div>Diego</div>
     <div>Stratta</div>

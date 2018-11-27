@@ -16,6 +16,7 @@ const StyledColorIncrement = styled(ColorIncrement)`
 `;
 
 export const Code: React.SFC<CodeProps> = ({ code }) => (
+  // @ts-ignore
   <StyledColorIncrement>{code}</StyledColorIncrement>
 );
 

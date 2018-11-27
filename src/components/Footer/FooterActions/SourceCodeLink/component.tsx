@@ -16,13 +16,16 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--quaternary-font-color);
 `;
 
-export const SourceCodeLink: React.SFC<ClassNameProp> = props => (
+export type SourceCodeLinkProps = ClassNameProp;
+
+export const SourceCodeLink: React.SFC<SourceCodeLinkProps> = props => (
   <StyledLink
     to="https://github.com/strattadb/portfolio"
     eventLabel="Website source code (GitHub)"
     rel="noopener noreferrer"
     target="_blank"
     className={props.className}
+    title="See the repository in GitHub"
   >
     <StyledFontAwesomeIcon icon={faCode} size="sm" />
     See the source code

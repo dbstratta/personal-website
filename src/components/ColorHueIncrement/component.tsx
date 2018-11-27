@@ -4,8 +4,8 @@ import theme from '../../theme';
 import Interval from '../Interval';
 
 export type ColorHueIncrementProps = Readonly<{
-  delay?: number;
-  initialColorHue?: number;
+  delay: number;
+  initialColorHue: number;
   render: (state: ColorHueIncrementState) => React.ReactNode;
 }>;
 
@@ -22,7 +22,7 @@ export class ColorHueIncrement extends PureComponent<
     initialColorHue: theme.colors.primaryColorHue,
   };
 
-  public state = { colorHue: this.props.initialColorHue! };
+  public state = { colorHue: this.props.initialColorHue };
 
   private changeColorHue = (): void => {
     this.setState(({ colorHue: prevColorHue }) => ({
@@ -38,7 +38,7 @@ export class ColorHueIncrement extends PureComponent<
     return (
       <>
         <Interval
-          delay={this.props.delay!}
+          delay={this.props.delay}
           handleInterval={this.changeColorHue}
         />
         {this.props.render(this.state)}

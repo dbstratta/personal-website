@@ -19,6 +19,8 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   color: var(--quaternary-font-color);
 `;
 
+let beforeInstallPromptEvent: Event | null = null;
+
 export type InstallAppButtonProps = ClassNameProp;
 
 export type InstallAppButtonState = Readonly<{
@@ -31,7 +33,7 @@ export class InstallAppButton extends React.PureComponent<
   InstallAppButtonState
 > {
   public readonly state: InstallAppButtonState = {
-    event: null,
+    event: beforeInstallPromptEvent,
     didInstall: false,
   };
 
@@ -43,10 +45,11 @@ export class InstallAppButton extends React.PureComponent<
   private addBeforeInstallPromptEventListener(): void {
     window.addEventListener('beforeinstallprompt', async (event: Event) => {
       this.setState({ event });
+      beforeInstallPromptEvent = event;
     });
   }
 
-  private handleClick = async (): Promise<void> => {
+  private handlePointerDown = async (): Promise<void> => {
     if (!this.state.event) {
       return;
     }
@@ -110,9 +113,10 @@ export class InstallAppButton extends React.PureComponent<
 
     return (
       <StyledButton
-        onClick={this.handleClick}
+        onPointerDown={this.handlePointerDown}
         className={this.props.className}
-        aria-label="Install this app"
+        aria-label="Install"
+        title="Install this app"
       >
         <StyledFontAwesomeIcon icon={faRobot} size="sm" />
         Install this app

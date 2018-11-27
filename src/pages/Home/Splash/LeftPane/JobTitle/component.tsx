@@ -15,6 +15,7 @@ const StyledDiv = styled.div`
 
   &:hover {
     color: var(--primary-font-color);
+    transform: scale(1.1);
   }
 `;
 

@@ -13,7 +13,6 @@ export const ShortAbout: React.SFC = () => (
 );
 
 const Wrapper = styled.div`
-  text-align: center;
   color: var(--secondary-font-color);
   font-size: calc(var(--lg-font-size) * 1.2);
   font-family: var(--serif-font-family);
@@ -24,10 +23,6 @@ const Wrapper = styled.div`
 
   &::first-letter {
     font-size: 1.3em;
-  }
-
-  @media (min-width: ${props => props.theme.breakpoints.lg}) {
-    text-align: initial;
   }
 `;
 
