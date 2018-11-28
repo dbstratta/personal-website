@@ -1,4 +1,4 @@
-FROM node:10.13.0 AS builder
+FROM node:10.14.0 AS builder
 ENV NODE_ENV=${NODE_ENV:-production}
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
