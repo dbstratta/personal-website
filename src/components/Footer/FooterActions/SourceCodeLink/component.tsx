@@ -25,7 +25,7 @@ export const SourceCodeLink: React.SFC<SourceCodeLinkProps> = props => (
     rel="noopener noreferrer"
     target="_blank"
     className={props.className}
-    title="See the repository in GitHub"
+    title="See the repo on GitHub"
   >
     <StyledFontAwesomeIcon icon={faCode} size="sm" />
     See the source code
