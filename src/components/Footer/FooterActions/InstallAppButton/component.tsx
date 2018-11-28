@@ -1,4 +1,4 @@
-import { faRobot } from '@fortawesome/free-solid-svg-icons';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styled from 'styled-components';
@@ -115,11 +115,11 @@ export class InstallAppButton extends React.PureComponent<
       <StyledButton
         onPointerDown={this.handlePointerDown}
         className={this.props.className}
-        aria-label="Install"
-        title="Install this app"
+        aria-label="Install app"
+        title="This website is a PWA. Feel free to install it!"
       >
-        <StyledFontAwesomeIcon icon={faRobot} size="sm" />
-        Install this app
+        <StyledFontAwesomeIcon icon={faRocket} size="sm" />
+        Install
       </StyledButton>
     );
   }
