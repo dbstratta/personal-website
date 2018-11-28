@@ -49,7 +49,7 @@ export class InstallAppButton extends React.PureComponent<
     });
   }
 
-  private handlePointerDown = async (): Promise<void> => {
+  private handleClick = async (): Promise<void> => {
     if (!this.state.event) {
       return;
     }
@@ -113,7 +113,7 @@ export class InstallAppButton extends React.PureComponent<
 
     return (
       <StyledButton
-        onPointerDown={this.handlePointerDown}
+        onClick={this.handleClick}
         className={this.props.className}
         aria-label="Install app"
         title="This website is a PWA. Feel free to install it!"

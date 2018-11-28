@@ -29,7 +29,7 @@ type NavigatorShare = Navigator & { share: NavigatorShareFn };
 export type ShareButtonProps = ClassNameProp;
 
 export class ShareButton extends PureComponent<ShareButtonProps> {
-  private readonly handlePointerDown = (): Promise<void> => this.shareWebsite();
+  private readonly handleClick = (): Promise<void> => this.shareWebsite();
 
   private readonly shareWebsite = async (): Promise<void> => {
     if (!('share' in (navigator as NavigatorShare))) {
@@ -68,7 +68,7 @@ export class ShareButton extends PureComponent<ShareButtonProps> {
 
     return (
       <StyledButton
-        onPointerDown={this.handlePointerDown}
+        onClick={this.handleClick}
         className={this.props.className}
         aria-label="Share this website"
         title="Share this website"
