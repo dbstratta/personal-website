@@ -23,6 +23,7 @@
     "commit": "commit"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.21",
     "@fortawesome/fontawesome-svg-core": "1.2.25",
     "@fortawesome/free-brands-svg-icons": "5.11.2",
     "@fortawesome/free-solid-svg-icons": "5.11.2",
@@ -44,6 +45,7 @@
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
     "@commitlint/prompt-cli": "8.2.0",
+    "@emotion/babel-preset-css-prop": "^10.0.17",
     "@svgr/webpack": "4.3.3",
     "@types/jest": "24.0.19",
     "@types/react": "16.9.9",
