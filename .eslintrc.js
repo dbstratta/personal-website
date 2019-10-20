@@ -17,7 +17,6 @@ module.exports = {
     'node',
     'promise',
     'unicorn',
-    'jest',
     'react',
     'react-hooks',
     'jsx-a11y',
@@ -31,7 +30,6 @@ module.exports = {
 
   env: {
     es6: true,
-    jest: true,
     node: true,
     browser: true,
     serviceworker: true,
@@ -43,7 +41,6 @@ module.exports = {
     'plugin:node/recommended',
     'plugin:promise/recommended',
     'plugin:unicorn/recommended',
-    'plugin:jest/recommended',
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:eslint-comments/recommended',
