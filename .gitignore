@@ -1,13 +1,7 @@
-# Dependencies
-node_modules
+node_modules/
+coverage/
+dist/
 
-# Testing
-coverage
-
-# Production
-dist
-
-# Misc
 .env
 /keys
 *.pyc

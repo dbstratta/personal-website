@@ -1,26 +1,27 @@
 const path = require('path');
 
-const { DefinePlugin } = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 
 const webpackCommonConfig = require('./webpack.common');
 
 const distFolderName = 'dist';
+
+const fileLoaderConfig = {
+  loader: 'file-loader',
+  options: {
+    name: 'static/media/[name].[hash:8].[ext]',
+  },
+};
 
 const webpackProdConfig = merge(webpackCommonConfig, {
   mode: 'production',
   devtool: 'source-map',
   bail: true,
 
-  entry: {
-    main: './src/index.tsx',
-  },
-
+  entry: ['./src/index.ts'],
   output: {
     filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
@@ -49,40 +50,25 @@ const webpackProdConfig = merge(webpackCommonConfig, {
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack', fileLoaderConfig],
       },
       {
-        test: /\.(png|jpg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
-          },
-        ],
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        use: ['graphql-tag/loader'],
+      },
+      {
+        test: /\.(png|jpe?g|webp)$/,
+        use: [fileLoaderConfig],
       },
     ],
   },
 
   plugins: [
-    new CleanWebpackPlugin([distFolderName]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'public/index.html',
-      minify: {
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        minifyCSS: true,
-        minifyJS: true,
-        minifyURLs: true,
-        removeComments: true,
-        removeEmptyAttributes: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-      },
     }),
     new CopyWebpackPlugin([
       {
@@ -91,39 +77,12 @@ const webpackProdConfig = merge(webpackCommonConfig, {
         ignore: ['index.html'],
       },
     ]),
-    new GenerateSW({
-      swDest: 'service-worker.js',
-      clientsClaim: true,
-      skipWaiting: true,
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/fonts\.(?:googleapis|gstatic)\.com\/(.*)/,
-          handler: 'cacheFirst',
-        },
-      ],
-    }),
-    new DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env.ENABLE_ANALYTICS': process.env.ENABLE_ANALYTICS === 'true',
-      'process.env.ENABLE_ERROR_TRACKING':
-        process.env.ENABLE_ERROR_TRACKING === 'true',
-      'process.env.SENTRY_DSN': JSON.stringify(process.env.SENTRY_DSN),
-    }),
   ],
 
   optimization: {
     splitChunks: {
       chunks: 'all',
     },
-    minimizer: [
-      new TerserPlugin({
-        parallel: true,
-        sourceMap: true,
-        terserOptions: {
-          ecma: 8,
-        },
-      }),
-    ],
   },
 
   resolve: {
