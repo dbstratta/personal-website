@@ -60,7 +60,7 @@
     "codecov": "3.6.1",
     "copy-webpack-plugin": "5.0.4",
     "cross-env": "6.0.3",
-    "danger": "9.2.2",
+    "danger": "9.2.10",
     "eslint": "6.5.1",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "6.4.0",
