@@ -78,7 +78,7 @@
     "husky": "3.0.9",
     "lint-staged": "9.4.2",
     "prettier": "1.15.3",
-    "react-hot-loader": "4.12.15",
+    "react-hot-loader": "4.12.19",
     "react-test-renderer": "16.7.0",
     "rimraf": "3.0.0",
     "terser-webpack-plugin": "2.1.3",
