@@ -47,7 +47,7 @@
     "@commitlint/prompt-cli": "8.2.0",
     "@emotion/babel-preset-css-prop": "^10.0.17",
     "@svgr/webpack": "4.3.3",
-    "@types/react": "16.9.9",
+    "@types/react": "16.9.19",
     "@types/react-dom": "16.9.2",
     "@types/react-helmet": "5.0.12",
     "@types/react-router-dom": "5.1.0",
