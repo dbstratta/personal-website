@@ -22,10 +22,6 @@ export default function startApplication(): void {
 function render(): void {
   const rootElement = document.getElementById('root');
 
-  if (!rootElement) {
-    throw new Error('#root element not found');
-  }
-
   const rootReactElement = <Root />;
 
   ReactDOM.render(rootReactElement, rootElement);
